@@ -111,7 +111,10 @@ body {
 /*estilos de experiencia-educacion*/
 
 
+ul {
+    list-style:none;
 
+}
 
 .titulos-secciones {
     text-align: center;
