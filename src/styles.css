@@ -1,1 +1,238 @@
-/* You can add global styles to this file, and also import other style files */
+
+/* Logo Arg-prog + redes-sociales + Btn de accesso */
+
+.flex-container {
+    display:flex;
+    height: 90px;
+    background-color: rgb(28, 116, 248);
+    align-items:center;    
+    margin-bottom:1px;
+    justify-content: space-between;    
+}
+
+body {
+    margin: 0px;
+}
+
+
+.logoArgProg img{
+    width: 160px;    
+}
+
+#textoAP {
+    font-size: 16px;
+    color:white;
+
+}
+
+.redes-sociales {
+    margin-left:auto;
+
+}
+
+.redes-sociales img {
+    width: 32px;
+    
+}
+.boton-acceso {
+    justify-content: right; 
+    margin-right: 20px;
+    margin-left: 50px;
+}
+
+
+/* header */
+
+.imagenUsuario {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    width: 13%;
+    margin-left: -95%;
+    margin-top: 32%;
+    border-radius: 50%;
+    border: 2px solid rgb(188, 207, 21);
+}
+
+.imagenPortada {
+    position: relative;
+    
+    z-index: 1;  
+}
+
+
+/*sobre mi*/
+
+.container-sobre-mi {
+    display: flex;       
+    
+    /*border-bottom: 2px solid rgb(153, 145, 145);*/
+    /*padding-bottom: 50px;*/
+    margin-top: 8%;
+    margin-left: 20px;
+    /*margin-right: 2%;*/
+    margin-bottom: 50px;
+
+    
+}
+
+.texto-sobre-mi {
+    text-align: justify;
+    border: 1px solid;
+    border-radius: 8px;
+    width: 100%;
+    padding: 80px;
+    margin-left: 30px;
+    margin-right: 30px;
+    /*box-shadow: 10px 10px 5px rgb(114, 114, 141);*/
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#info-usuario {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    width: 30%;    
+    color: rgb(37, 39, 44);
+    text-shadow: 2px 2px 3px rgb(130, 131, 60);
+    /*border: 1px solid;*/
+    
+    
+    /*margin-left: 5%;
+    margin-right: 5%;
+    /*padding-left: 15%;
+    padding-right: 15%;*/
+    
+}
+
+
+
+
+/*estilos de experiencia-educacion*/
+
+
+
+
+.titulos-secciones {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.seccion-box {
+    display: flex;
+    flex-wrap: column;
+    align-items: center;
+    /*margin: 70px 30px;*/
+    border: 1px solid;
+    border-radius: 13px;
+    padding: 50px;
+}
+
+.seccion-box img { /*logo de empresa-escuela*/
+    width: 130px;
+    margin: 0 auto; 
+    border-radius: 8px;  
+}
+
+.seccion-box p,h4,h5 { /*parrafos de descripcion*/
+    width: 70%;
+    border: 1px solid rgb(223, 0, 0);
+    padding: 10px;
+    margin: 0 auto;
+    /*text-align: center;*/
+    text-align: justify; 
+    color: rgb(0, 0, 0);   
+}
+
+.seccion-box span {
+    float: right;
+    text-align: right;
+    margin-top: 0px;
+}
+
+.informacion {
+    border: 1px solid;
+    
+}
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+        height: 185px;        
+    }
+    
+    .redes-sociales img {
+        width: 22px;
+    }
+
+    .boton-acceso {
+        margin-left: 22px;
+    }
+    
+    .logoArgProg img{
+        width: 110px;
+
+    }
+    #textoAP {
+        font-size: 10px;        
+    }
+
+    .redes-sociales {
+        margin-left: 0px;    
+    }
+
+    .imagenPortada {
+        filter: blur(2px);
+    }
+    
+    .imagenUsuario {
+        position: absolute;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        margin-top: 150px;
+        margin-left: -55%;
+        z-index: 2;
+    }
+    
+    .container-sobre-mi {
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 1;
+    }
+
+    #info-usuario {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;    
+        color: rgb(37, 39, 44);
+        text-shadow: 1px 1px 2px rgb(130, 131, 60);
+    }
+
+    .texto-sobre-mi {
+        /*width: 70%;*/
+        /*text-align: justify;*/
+        text-align: center;
+        padding: 10px;
+        margin: 0px;
+        border: none;
+        border-radius: 0px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        box-shadow: none;
+        /*border: 1px solid;*/
+        /*margin: 50px;*/
+        margin-top: 30px;
+        
+        
+    }
+    
+    .experiencia {
+        flex-direction: column;
+    }
+
+    .seccion-box {
+        flex-direction: column;
+    }
+}
