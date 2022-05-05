@@ -1,7 +1,8 @@
 .experiencia {
     display:column;
-    border: 2px solid red;
-    border-radius: 5px;
+    border: 1px solid rgb(185, 184, 184);
+    border-radius: 8px;
+    margin: 15px;
     
 }
 
@@ -21,17 +22,17 @@
 
 .titulos-secciones {
     text-align: center;
-    /*margin-top: 30px;*/
+    margin-top: 30px;
 }
 
 .seccion-box {
     display: flex;
     flex-wrap: column;
     align-items: center;
-    /*margin: 70px 30px;*/
     border: 1px solid;
     border-radius: 13px;
-    padding: 50px;
+    padding: 40px;
+    margin: 3%;
 }
 
 .seccion-box img { /*logo de empresa-escuela*/
@@ -42,7 +43,7 @@
 
 .seccion-box p,h4,h5 { /*parrafos de descripcion*/
     width: 90%;
-    border: 1px solid rgb(223, 0, 0);
+    /* border: 1px solid rgb(223, 0, 0); */
     padding: 10px;
     margin: 0 auto;
     /*text-align: center;*/
@@ -56,8 +57,8 @@
     margin-top: 0px;
 }
 
-.informacion {
+/* .informacion {
     border: 1px solid;
     
-}
+} */
 

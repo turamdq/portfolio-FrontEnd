@@ -1,0 +1,82 @@
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column;
+        height: 185px;        
+    }
+    
+    .redes-sociales img {
+        width: 22px;
+    }
+
+    .boton-acceso {
+        margin-left: 22px;
+    }
+    
+    .logoArgProg img{
+        width: 110px;
+
+    }
+    #textoAP {
+        font-size: 10px;        
+    }
+
+    .redes-sociales {
+        margin-left: 0px;    
+    }
+
+    .imagenPortada {
+        filter: blur(2px);
+    }
+    
+    .imagenUsuario {
+        position: absolute;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        margin-top: 150px;
+        margin-left: -55%;
+        z-index: 2;
+    }
+    
+    .container-sobre-mi {
+        flex-direction: column;
+        justify-content: flex-start;
+        z-index: 1;
+    }
+
+    #info-usuario {
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;    
+        color: rgb(37, 39, 44);
+        text-shadow: 1px 1px 2px rgb(130, 131, 60);
+    }
+
+    .texto-sobre-mi {
+        /*width: 70%;*/
+        /*text-align: justify;*/
+        text-align: center;
+        padding: 10px;
+        margin: 0px;
+        border: none;
+        border-radius: 0px;
+        border-top: 1px solid;
+        border-bottom: 1px solid;
+        box-shadow: none;
+        /*border: 1px solid;*/
+        /*margin: 50px;*/
+        margin-top: 30px;
+        
+        
+    }
+    
+    .experiencia {
+        flex-direction: column;
+    }
+
+    .seccion-box {
+        flex-direction: column;
+    }
+}
