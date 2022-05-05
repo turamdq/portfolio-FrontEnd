@@ -1,0 +1,63 @@
+.experiencia {
+    display:column;
+    border: 2px solid red;
+    border-radius: 5px;
+    
+}
+
+.btn-agregar {
+     text-align: right;
+     margin: 20px;     
+}
+
+.btn-edicion {
+    align-self: flex-start;
+    margin-left: 5px;
+}
+
+.btn-eliminar {
+    align-self: flex-start;
+}
+
+.titulos-secciones {
+    text-align: center;
+    /*margin-top: 30px;*/
+}
+
+.seccion-box {
+    display: flex;
+    flex-wrap: column;
+    align-items: center;
+    /*margin: 70px 30px;*/
+    border: 1px solid;
+    border-radius: 13px;
+    padding: 50px;
+}
+
+.seccion-box img { /*logo de empresa-escuela*/
+    width: 130px;
+    margin: 0 auto; 
+    border-radius: 8px;  
+}
+
+.seccion-box p,h4,h5 { /*parrafos de descripcion*/
+    width: 90%;
+    border: 1px solid rgb(223, 0, 0);
+    padding: 10px;
+    margin: 0 auto;
+    /*text-align: center;*/
+    text-align: justify; 
+    color: rgb(0, 0, 0);   
+}
+
+.seccion-box span {
+    float: right;
+    text-align: right;
+    margin-top: 0px;
+}
+
+.informacion {
+    border: 1px solid;
+    
+}
+
