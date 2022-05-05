@@ -1,9 +1,17 @@
 
-@media (max-width: 600px) {
-    .flex-container {
+@media screen and (max-width: 600px) {
+    /* .flex-container {
         flex-direction: column;
-        height: 185px;        
-    }
+        /* height: 185px; 
+    } */
+    .flex-container {
+    display:column;
+    height: 190px;
+    background-color: rgb(28, 116, 248);
+    align-items:center;    
+    margin-bottom:1px;
+    /* justify-content: space-between;     */
+}
     
     .redes-sociales img {
         width: 22px;
@@ -34,9 +42,10 @@
         border-radius: 50%;
         width: 70px;
         height: 70px;
-        margin-top: 150px;
-        margin-left: -55%;
-        z-index: 2;
+        /* justify-content: center; */
+        /* margin-top: 150px;
+        margin-left: -55%; */
+        /* z-index: 2; */
     }
     
     .container-sobre-mi {
@@ -78,5 +87,13 @@
 
     .seccion-box {
         flex-direction: column;
+    }
+    .proyectos {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .card {
+        width: 13rem !important;
     }
 }

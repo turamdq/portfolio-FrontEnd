@@ -7,17 +7,28 @@
 }
 
 .btn-agregar {
-     text-align: right;
-     margin: 20px;     
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 50px;     
 }
 
 .btn-edicion {
-    align-self: flex-start;
-    margin-left: 5px;
+   align-self: flex-start;    
+   background-color: rgb(255, 255, 255);
+   color: rgb(46, 43, 211);
+   
+   font-size: 20px;
+   
+   
 }
 
 .btn-eliminar {
-    align-self: flex-start;
+   align-self: flex-start;
+   margin-left: 2px;
+   background-color: rgb(255, 255, 255);
+   color: rgb(226, 19, 19);
+   
+   font-size: 20px;
 }
 
 .titulos-secciones {
