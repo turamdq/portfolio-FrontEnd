@@ -16,6 +16,7 @@
 }
 
 .texto-sobre-mi {
+    display: flex;
     text-align: justify;
     border: 1px solid;
     border-radius: 8px;
@@ -43,4 +44,10 @@
     /*padding-left: 15%;
     padding-right: 15%;*/
     
+}
+
+.lapiz {
+    margin-top: -80px;
+    margin-right: -80px;
+    font-size: 18px;
 }

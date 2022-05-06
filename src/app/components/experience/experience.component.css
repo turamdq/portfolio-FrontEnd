@@ -15,9 +15,10 @@
 .btn-edicion {
     align-self: flex-start;    
     background-color: rgb(255, 255, 255);
-    color: rgb(46, 43, 211);
-    
-    font-size: 20px;
+    /* color: rgb(46, 43, 211); */
+    font-size: 18px;
+    /* border: 1px solid; */
+
     
     
 }
@@ -26,9 +27,9 @@
     align-self: flex-start;
     margin-left: 2px;
     background-color: rgb(255, 255, 255);
-    color: rgb(226, 19, 19);
+    /* color: rgb(226, 19, 19); */
     
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .titulos-secciones {
