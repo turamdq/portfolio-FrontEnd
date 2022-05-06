@@ -3,14 +3,15 @@
 .flex-container {
     display:flex;
     height: 90px;
-    background-color: rgb(28, 116, 248);
+    background-color: #0d6efd;
     align-items:center;    
-    margin-bottom:1px;
+    margin-bottom:5px;
     justify-content: space-between;    
 }
 
 body {
     margin: 0px;
+    
 }
 
 
@@ -47,14 +48,15 @@ body {
     position: absolute;
     z-index: 2;
     width: 13%;
-    margin-left: -95%;
-    margin-top: 32%;
+    margin-left: -92%;
+    margin-top: 28%;
     border-radius: 50%;
     border: 2px solid rgb(188, 207, 21);
 }
 
 .imagenPortada {
     position: relative;
-    
-    z-index: 1;  
+    z-index: 1;
+    border-radius: 8px;
+   
 }
