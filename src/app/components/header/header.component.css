@@ -2,21 +2,21 @@
 
 .flex-container {
     display:flex;
-    height: 90px;
+    height: 78px;
     background-color: #0d6efd;
     align-items:center;    
     margin-bottom:5px;
     justify-content: space-between;    
 }
 
-body {
+/* body {
     margin: 0px;
     
-}
+} */
 
 
 .logoArgProg img{
-    width: 160px;    
+    width: 150px;    
 }
 
 #textoAP {
