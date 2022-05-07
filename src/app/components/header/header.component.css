@@ -51,31 +51,50 @@ body {
     margin-left: -92%;
     margin-top: 28%;
     border-radius: 50%;
-    border: 2px solid rgb(188, 207, 21);
+    border: 2px solid rgb(8, 99, 235);
 }
 
 .imagenPortada {
-    position: relative;
+    /* position: relative; */
     z-index: 1;
     border-radius: 8px;
    
 }
 
-.lapiz {
+/* Boton de edicion portada */
+.container-fluid {
+    position: relative;
+}
+
+.btn-portada {
+    /* position: absolute; */
     position: absolute;
     z-index: 2;
-    
-  top: 50%;
-  left: 50%;
-  /* transform: translate(-50%, -50%); */
-  /* -ms-transform: translate(-50%, -50%); */
-    /* color: rgb(235, 157, 39);
-    font-size: 10px;
-    
-    margin-left: 93%;
-    margin-top: 10%;
-    border: 2px solid rgb(235, 157, 39);
-    border-radius: 50%; */
+        
+    top: 8%;
+    left: 92%;
+    color: rgb(255, 255, 255);
+    font-size:1.5vw;
     
     
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;    
+}
+
+
+.btn-usuario {
+    position: absolute;
+    z-index: 3;
+    margin-left: 8px;
+    
+    /* position: absolute;
+    z-index: 3;
+    top: 50%;    
+    
+    color: rgb(255, 255, 255);
+    font-size:5vw;
+    
+    
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50%;     */
 }
