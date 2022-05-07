@@ -1,0 +1,35 @@
+{
+    "name": "Andrés Turano",
+    "backImage": "../assets/Img/bg-header2.jpg",
+    "image": "../assets/Img/imagen_usuario.jpg",
+    "position": "Full Stack Developer Jr.",
+    "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidunt soluta repudiandae ex, aspernatur veritatis voluptatibus impedit fugit omnis saepe in accusamus facilis? Reiciendis!",
+    "experience": [{
+        "name": "Nombre de empresa",
+        "period": "periodo de trabajo",
+        "position": "Puesto",
+        "tasks": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
+        "image": "../assets/Img/jobs.png"
+    }],
+    "education": [{
+        "name": "Nombre de escuela",
+        "title": "Título",
+        "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
+        "image": "../assets/Img/educacion-logo.png"
+    }],
+    "skills": {
+        "html": "",
+        "ccs": "",
+        "javascript": "",
+        "bootstrap": "",
+        "angular": "",
+        "typescript": ""
+    },
+    "projects": {
+        "name": "Nombre del Proyecto",
+        "description": "Descripcion del proyecto realizado.",
+        "fecha": "",
+        "link": "",
+        "image": "../assets/Img/proyecto1.jpg"
+    }
+}
