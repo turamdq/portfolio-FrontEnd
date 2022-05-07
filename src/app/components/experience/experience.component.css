@@ -20,8 +20,22 @@
 .btn-edicion, .btn-eliminar{
     align-self: flex-start;
     font-size: 18px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
 }
+
+.btn-eliminar:hover {
+   
+    
+    border: 1px solid rgb(17, 90, 201);
+    border-radius: 10%;
+  }
+
+.btn-edicion:hover {
+    
+    
+    border: 1px solid rgb(17, 90, 201);
+    border-radius: 10%;
+  }   
 
 .titulos-secciones {
     text-align: center;
