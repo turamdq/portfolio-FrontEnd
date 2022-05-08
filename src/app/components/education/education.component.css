@@ -49,6 +49,11 @@
     margin-top: 30px;
 }
 
+.list-item {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
 .seccion-box {
     display: flex;
     flex-wrap: column;

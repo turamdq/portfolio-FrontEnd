@@ -9,56 +9,37 @@
         
         </div>
     
+        <ul class="list-item">
+            <li *ngFor = "let experience of experienceList">
+                <div class="seccion-box">
 
-        <div class="seccion-box">
-
-        
-        
-            <div>
-
-                <img src="../../../assets/Img/Jobs.png" alt="">
-
-            </div>
-
-            <div class="informacion">
                 
-                <h5 class="nombre-empresa">Nombre de empresa<span class="fechas-trabajos">periodo de trabajo</span></h5>
                 
-                <h5 class="puesto">Puesto</h5>
-                
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.</p>
-            </div>
+                    <div>
 
-                       
-            <button class="btn btn-edicion"><i class="fa-solid fa-pencil"></i></button>
-            <button class="btn btn-eliminar"><i class="fa-solid fa-trash"></i></button>
+                        <img [src]="experience.image" alt="">
+
+                    </div>
+
+                    <div>
+                        
+                        <h4>{{experience.name}}<span class="fechas-trabajos">{{experience.period}}</span></h4>
+                        
+                        <h5>{{experience.position}}</h5>
+                        
+                        <p>{{experience.tasks}}</p>
+                    </div>
+
+                            
+                    <button class="btn btn-edicion"><i class="fa-solid fa-pencil"></i></button>
+                    <button class="btn btn-eliminar"><i class="fa-solid fa-trash"></i></button>
+
+                
+
+                </div>
+            </li>
 
             
-
-        </div>
-
-        <div class="seccion-box">
-
-        
-        
-            <div>
-
-                <img src="../../../assets/Img/Jobs.png" alt="">
-
-            </div>
-
-            <div class="informacion">
-                
-                <h5 class="nombre-empresa">Nombre de empresa<span class="fechas-trabajos">periodo de trabajo</span></h5>
-                
-                <h5 class="puesto">Puesto</h5>
-                
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.</p>
-            </div>
-
-            <button class="btn btn-edicion"><i class="fa-solid fa-pencil"></i></button>
-            <button class="btn btn-eliminar"><i class="fa-solid fa-trash"></i></button>
-
-        </div>
+        </ul>
 
     </div>
