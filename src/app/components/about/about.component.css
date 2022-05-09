@@ -18,14 +18,14 @@
 .texto-sobre-mi {
     display: flex;
     text-align: justify;
-    border: 1px solid;
+    /* border: 1px solid; */
     border-radius: 8px;
     width: 80%;
     padding: 100px;
     margin-left: 30px;
     margin-right: 30px;
     /*box-shadow: 10px 10px 5px rgb(114, 114, 141);*/
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(13, 110, 253, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #info-usuario {

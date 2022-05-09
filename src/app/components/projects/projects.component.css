@@ -1,6 +1,6 @@
 .proyectos {
     display: flex;
-    flex-wrap: column;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -13,4 +13,10 @@
     margin-bottom: 30px !important;
     /* border: 1px solid; */
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 40px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 0px 8px 10px 5px rgba(65, 155, 240, 0.2), 0 10px 10px 0 rgba(37, 88, 133, 0.19);
+    
 }
