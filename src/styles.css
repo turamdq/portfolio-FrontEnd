@@ -111,11 +111,19 @@
         flex-direction: column;
     }
 
+    .skill {
+        padding: 1px;
+    }
+
+    .skills {
+        margin: 0px;
+    }
+
     
     .proyectos {
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 10px;
+        /* flex-direction: column; */
+        /* align-items: center; */
+        /* margin-bottom: 10px; */
     }
     .card {
         width: 13rem !important;
