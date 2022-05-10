@@ -14,12 +14,19 @@
 
 
 .btn-eliminar {    
-    margin-left: 2px;    
+    margin-left: 10px;    
+}
+
+.botones {
+    display: flex;
+    align-self: flex-start;
+    font-size: 18px;
 }
 
 .btn-edicion, .btn-eliminar{
-    align-self: flex-start;
-    font-size: 18px;
+    /* display: flex;
+    align-self: flex-start; */
+    
     /* background-color: rgb(255, 255, 255); */
 }
 
@@ -66,7 +73,7 @@
 }
 
 .seccion-box p,h4,h5 { /*parrafos de descripcion*/
-    width: 90%;
+    width: 80%;
     /* border: 1px solid rgb(223, 0, 0); */
     padding: 10px;
     margin: 0 auto;
@@ -75,11 +82,6 @@
     color: rgb(0, 0, 0);   
 }
 
-.seccion-box span {
-    float: right;
-    text-align: right;
-    margin-top: 0px;
-}
 
 
 

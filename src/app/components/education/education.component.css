@@ -7,6 +7,12 @@
     
 }
 
+.botones {
+    display: flex;
+    align-self: flex-start;
+    font-size: 18px;
+}
+
 .btn-agregar {
     text-align: right;
     margin-top: 10px;
@@ -18,7 +24,7 @@
    background-color: rgb(255, 255, 255);
    /* color: rgb(46, 43, 211); */
    
-   font-size: 20px;  
+   /* font-size: 20px;   */
 }
 
 .btn-eliminar:hover {
@@ -37,11 +43,11 @@
 
 .btn-eliminar {
    align-self: flex-start;
-   margin-left: 2px;
+   margin-left: 10px;
    background-color: rgb(255, 255, 255);
    /* color: rgb(226, 19, 19); */
    
-   font-size: 20px;
+   /* font-size: 20px; */
 }
 
 .titulos-secciones {

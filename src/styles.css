@@ -8,9 +8,10 @@
     display:column;
     height: 190px;
     background-color: rgb(28, 116, 248);
-    align-items:center;    
+    /* align-items:center;     */
     margin-bottom:1px;
-    /* justify-content: space-between;     */
+    /* justify-content: center; */
+    
 }
     
     .redes-sociales img {
@@ -33,19 +34,16 @@
         margin-left: 0px;    
     }
 
-    .imagenPortada {
+    /* .imagenPortada {
         filter: blur(2px);
-    }
+    } */
     
     .imagenUsuario {
         position: absolute;
         border-radius: 50%;
         width: 70px;
         height: 70px;
-        /* justify-content: center; */
-        /* margin-top: 150px;
-        margin-left: -55%; */
-        /* z-index: 2; */
+        
     }
     
     .container-sobre-mi {
@@ -57,10 +55,12 @@
     #info-usuario {
         font-size: 25px;
         font-weight: bold;
-        text-align: center;
+        /* text-align: center; */
         width: 100%;    
         color: rgb(37, 39, 44);
         text-shadow: 1px 1px 2px rgb(130, 131, 60);
+        margin-left: 150px;
+        
     }
 
     .texto-sobre-mi {
@@ -85,9 +85,33 @@
         flex-direction: column;
     }
 
+    /* .titulos-secciones {
+        text-align: center;
+        margin-top: 0px;
+    } */
+
+    .botones {
+        /* text-align: center; */
+        margin-left: 109px;
+        
+        margin-top: 30px;
+    }
+
+    .titulos-secciones {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .btn-agregar {
+        margin-bottom: 20px;
+            
+    }
+
     .seccion-box {
         flex-direction: column;
     }
+
+    
     .proyectos {
         flex-direction: column;
         align-items: center;
