@@ -1,39 +1,43 @@
 <div class="flex-container">
     <!--Logo - Redes sociales - Boton de acceso-->
 
-    <div class="logoArgProg">
+    <nav class="logoArgProg">
+        <div>
         <img src="../assets/Img/APLogo-20-20-200px.png" alt="">
-    </div>
+        <span id="textoAP">- #Yo Programo</span>
+        </div>
+    </nav>
     
-    <div>
-        <h6 id="textoAP">- #Yo Programo</h6>
+    <div class="espacio">
+        <!-- Solo un espacio vacio -->
     </div>
 
-    <div class="redes-sociales">
-        <a href="#"><i class="fa-brands fa-facebook icons"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope icons"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin icons"></i></a>
-        
-    </div>
-
-    <div class="boton-acceso">
+    
+    <div class="redes-acceso">
+        <div class="redes-sociales">
+            <a href="#"><i class="fa-brands fa-facebook icons"></i></a>
+            <a href="#"><i class="fa-solid fa-envelope icons"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin icons"></i></a>            
+        </div>
+        <div class="boton-acceso">
         <button type="button" class="btn btn-warning">Acceder</button>
+        </div>
     </div>
 
 </div>
 
-
+<!--imagen de portada + imagen de usuario superpuesta (Fluid de bootstrap)-->
 <div class="container-fluid">
-    <!--imagen de portada + imagen de usuario superpuesta (Fluid de bootstrap)-->
+    
     
     <img class="img-fluid imagenPortada" [src]="miPortfolio.backImage" alt="">
     
-    <button class="btn btn-portada"><i class="fa-solid fa-pencil img-fluid"></i></button>
+    <button class="btn btn-portada"><i class="fa-solid fa-pencil"></i></button>
     
     <img class="img-fluid imagenUsuario" [src]="miPortfolio.image">
     
 
-    <button class="btn btn-usuario"><i class="fa-solid fa-pencil img-fluid"></i></button>
+    <button class="btn btn-usuario"><i class="fa-solid fa-pencil"></i></button>
 
    
 
