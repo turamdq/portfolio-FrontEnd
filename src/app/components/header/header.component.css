@@ -76,17 +76,18 @@
 }
 
 .imagenPortada {
-    /* position: relative; */
+    position: relative;
     z-index: 1;
-    border-radius: 8px;
+    /* border-radius: 8px; */
+    width: 100%;
     
    
 }
 
 /* Boton de edicion portada */
-.container-fluid {
+.container-portada {
     position: relative;
-    display:inline-block;
+    /* display: inline-block; */
 }
 
 .btn-portada {
@@ -121,8 +122,8 @@
     position: absolute;
     z-index: 2;
         
-    top: 95%;
-    left: 12%;
+    top: 22em;
+    left: 8.5em;
     color: rgb(0, 0, 0);
     font-size:1.5vw;
     background-color: rgb(255, 255, 255);
