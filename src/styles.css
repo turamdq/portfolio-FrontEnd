@@ -54,6 +54,7 @@
         margin-bottom: 40px;
     }
 
+    
     .btn-agregar {
         margin-bottom: 30px;
             
@@ -61,6 +62,7 @@
 
     .seccion-box {
         flex-direction: column;
+        
     }
     
 }
