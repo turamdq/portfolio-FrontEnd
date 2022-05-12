@@ -2,7 +2,7 @@
     display:column;    
     border: 1px solid rgb(185, 184, 184);
     border-radius: 8px;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 100px 35px;
 }
 
@@ -52,6 +52,7 @@
 .list-item {
     list-style-type: none;
     padding-left: 0px;
+    
 }
 
 .seccion-box {
@@ -62,6 +63,7 @@
     border-radius: 13px;
     padding: 40px;
     margin: 3%;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .seccion-box img { /*logo de empresa-escuela*/
