@@ -18,10 +18,17 @@
     margin-left: 30px;
     margin-right: 30px;
     box-shadow: 0 4px 8px 0 rgba(13, 110, 253, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    
 }
 
 .texto-sobre-mi h2 {
     color: rgb(13, 1, 122);
+    
+}
+
+.interior-sobremi {
+    
 }
 
 .info-usuario {

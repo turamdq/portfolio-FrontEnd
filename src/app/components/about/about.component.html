@@ -1,4 +1,6 @@
-<div class="container-sobre-mi">          
+<div class="container-sobre-mi">
+    
+    
     
     <div class="info-usuario">
         <div>
@@ -10,16 +12,49 @@
         </div>
     </div>
 
-    <div class="texto-sobre-mi">
+    
+
         
+        <div class="texto-sobre-mi">
+
         <div>
             <h2>Sobre mí</h2>
-            <p>{{miPortfolio.about}}</p>
+            <p >{{sobreMi}}</p> <!--{{miPortfolio.about}}-->
         </div>
         <div class="lapiz">
-            <button class="btn"><i class="fa-solid fa-pencil"></i></button>
+            <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pencil"></i></button>
         </div>
         
+        </div>
+        
+                
+   
+
+    
+<!-- Modal de Bootstrap -->
+<div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Sobre mí</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="text-align: center">
+            
+
+            <textarea cols="120" rows="10" style="max-width:100%;" [(ngModel)]="sobreMi"></textarea>
+        
+            
+        </div>
+        <div class="modal-footer" >
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar</button>
+        </div>
+      </div>
     </div>
+  </div>
+    
+   
 
 </div>
+
