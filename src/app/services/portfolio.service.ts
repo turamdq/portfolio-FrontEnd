@@ -20,5 +20,7 @@ export class PortfolioService {
     
   }
 
-
+  modificarDatos(url: string, body: any): Observable<any> {
+    return this.http.put(url, body);
+  }
 }

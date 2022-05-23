@@ -1,9 +1,36 @@
 {
     "about": [{
-        "name": "Andrés E. Turano",
+        "name": "Andrés Turano",
         "backImage": "../assets/Img/bg-header2.jpg",
         "image": "../assets/Img/imagen_usuario.jpg",
         "position": "Full Stack Developer Jr.",
         "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidunt soluta repudiandae ex, aspernatur veritatis voluptatibus impedit fugit omnis saepe in accusamus facilis? Reiciendis!"
+        }],
+
+    "experience": [{
+        "name": "Nombre de empresa",
+        "image": "../assets/Img/jobs.png",
+        "period": "periodo de trabajo",
+        "position": "Puesto",
+        "tasks": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+            
+        },
+        {   
+            "name": "Nombre de empresa",
+            "image": "../assets/Img/jobs.png",
+            "period": "periodo de trabajo",
+            "position": "Puesto",
+            "tasks": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+        }],
+        "education": [{
+            "name": "Nombre de escuela",
+            "title": "Título",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
+            "image": "../assets/Img/educacion-logo.png"
+        },
+        {   "name": "Nombre de escuela",
+            "title": "Título",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
+            "image": "../assets/Img/educacion-logo.png"
         }]
 }

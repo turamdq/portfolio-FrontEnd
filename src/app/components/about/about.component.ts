@@ -19,23 +19,17 @@ export class AboutComponent implements OnInit {
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.listTodos();
-    // this.datosPortfolio.obtenerDatos().subscribe(data => {
-    //   console.log(data);
-    //   this.miPortfolio=data;
-    //   this.sobreMi = this.miPortfolio.about;
-    // });
+    this.leerDatos();
   }
 
   //Funcion para obtener datos mediante el servicio
-  listTodos(){
+  leerDatos(){
     this.datosPortfolio.obtenerDatos(this.url).subscribe((response)=>{
-      this.datosList = response;
-      
+      this.datosList = response;      
     });
   }
   
-  
+  guardarCambios(dato:any){
 
-
+  }
 }
