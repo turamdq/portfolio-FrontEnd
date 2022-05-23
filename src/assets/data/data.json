@@ -12,7 +12,7 @@
         "image": "../assets/Img/jobs.png",
         "period": "periodo de trabajo",
         "position": "Puesto",
-        "tasks": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+        "tasks": "e suscipit labore dolorem. Asperiores  praesentium maxime libero eius."
             
         },
         {   
@@ -21,11 +21,18 @@
             "period": "periodo de trabajo",
             "position": "Puesto",
             "tasks": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+        },
+        {   
+            "name": "Nombre de empresa",
+            "image": "../assets/Img/jobs.png",
+            "period": "periodo de trabajo",
+            "position": "Puesto",
+            "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
         }],
         "education": [{
             "name": "Nombre de escuela",
             "title": "Título",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
+            "description": "Lorem ipsumlabore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
             "image": "../assets/Img/educacion-logo.png"
         },
         {   "name": "Nombre de escuela",
