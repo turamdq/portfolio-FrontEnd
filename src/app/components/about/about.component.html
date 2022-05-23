@@ -1,11 +1,18 @@
-<div class="container-sobre-mi">
+<!-- <div *ngFor="let dato of datosList">
+
+  <h1>{{dato.name}}</h1>
+
+</div> -->
+
+
+<div *ngFor="let dato of datosList" class="container-sobre-mi">
     
     
     
     <div class="info-usuario">
         <div>
-            <p>{{miPortfolio.name}}</p>
-            <p>{{miPortfolio.position}}</p>
+            <p>{{dato.name}}</p>
+            <p>{{dato.position}}</p>
         </div>
         <div>
             <button class="btn btn-edicion"><i class="fa-solid fa-pencil"></i></button>
@@ -19,7 +26,7 @@
 
         <div>
             <h2>Sobre mí</h2>
-            <p >{{sobreMi}}</p> <!--{{miPortfolio.about}}-->
+            <p >{{dato.about}}</p> 
         </div>
         <div class="lapiz">
             <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-pencil"></i></button>
@@ -42,7 +49,7 @@
         <div class="modal-body" style="text-align: center">
             
 
-            <textarea cols="120" rows="10" style="max-width:100%;" [(ngModel)]="sobreMi"></textarea>
+            <textarea cols="120" rows="10" style="max-width:100%;" [(ngModel)]="dato.about"></textarea>
         
             
         </div>
