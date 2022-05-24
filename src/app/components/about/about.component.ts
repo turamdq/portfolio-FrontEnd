@@ -11,7 +11,7 @@ export class AboutComponent implements OnInit {
 
 
   datosList:any;
-  backupDatos:any;
+  // backupDatos:any;
   url:string="http://localhost:3000/about/";
   
 
@@ -19,7 +19,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.leerDatos();
-    this.datosList = this.backupDatos
+    // this.datosList = this.backupDatos
   }
 
   //Funcion para obtener datos mediante el servicio
@@ -37,6 +37,6 @@ export class AboutComponent implements OnInit {
 
   //vuelve a Cargar los datos guardados en la BDD
   descartarCambios() {
-    return this.ngOnInit();    
+    return this.leerDatos();    
   }
 }

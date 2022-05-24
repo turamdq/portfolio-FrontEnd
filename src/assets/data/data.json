@@ -3,10 +3,15 @@
     {
       "id": "1",
       "name": "Andrés Turano",
-      "backImage": "../assets/Img/bg-header2.jpg",
-      "image": "../assets/Img/imagen_usuario.jpg",
       "position": "Full Stack Developer Jr.",
-      "about": "FUNCIONAAAA!!! ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de datosssss"
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta imagen que no andaaaaa"
+    }
+  ],
+  "header": [
+    {
+      "id": "1",
+      "backImage": "../assets/Img/bg-header2.jpg",
+      "image": "../assets/Img/imagen_usuario.jpg"
     }
   ],
   "experience": [
