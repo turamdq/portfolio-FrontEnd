@@ -11,25 +11,25 @@ export class AboutComponent implements OnInit {
 
 
   datosList:any;
-  url:string="http://localhost:3000/about";
-  // miPortfolio: any;
-  // sobreMi?: string;
+  url:string="http://localhost:3000/about/";
   
 
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
     this.leerDatos();
+    
   }
 
   //Funcion para obtener datos mediante el servicio
   leerDatos(){
     this.datosPortfolio.obtenerDatos(this.url).subscribe((response)=>{
-      this.datosList = response;      
+      this.datosList = response;           
     });
   }
   
   guardarCambios(dato:any){
-
+    console.log(dato);    
+    this.datosPortfolio.modificarDatos(this.url, dato).subscribe()    
   }
 }
