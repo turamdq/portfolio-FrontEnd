@@ -16,14 +16,6 @@
   ],
   "experience": [
     {
-      "id": "1",
-      "name": "Nombre de empresa",
-      "image": "../assets/Img/jobs.png",
-      "period": "periodo de trabajo",
-      "position": "Puesto",
-      "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
-    },
-    {
       "id": "2",
       "name": "Nombre de empresa",
       "image": "../assets/Img/jobs.png",
@@ -33,14 +25,6 @@
     },
     {
       "id": "3",
-      "name": "Nombre de empresa",
-      "image": "../assets/Img/jobs.png",
-      "period": "periodo de trabajo",
-      "position": "Puesto",
-      "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
-    },
-    {
-      "id": "4",
       "name": "Nombre de empresa",
       "image": "../assets/Img/jobs.png",
       "period": "periodo de trabajo",

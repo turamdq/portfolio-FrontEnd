@@ -32,22 +32,39 @@
 
                     <div class="botones">        
                     <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#Modal"><i class="fa-solid fa-pencil"></i></button>
-                    <button class="btn btn-eliminar" (click)="borrarItem(experience)"><i class="fa-solid fa-trash"></i></button>
+                    <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminar"><i class="fa-solid fa-trash"></i></button>
                     </div>
 
                 
 
                 </div>
+
+                <!-- Modal de Bootstrap confirmacion de eliminacion-->
+        <div class="modal fade " id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div class="modal-content">
+                <!-- <div class="modal-header"> -->
+                  <!-- <h5 class="modal-title" id="exampleModalLabel" style="text-align: center">Eliminar item</h5> -->
+                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                <!-- </div> -->
+                <div class="modal-body" style="text-align: center">
+                    
+        
+                    <p><b>Esta seguro de eliminar este item ?</b></p>
+                
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="borrarItem(experience)">Eliminar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
             </li>
 
             
         </ul>
-        <!-- Modal -->
-        <div class="modal fade " id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content">
-                
-            </div>
-            </div>
-        </div>
+        
     </div>
