@@ -29,4 +29,9 @@ export class ExperienceComponent implements OnInit {
     });
   }
 
+  borrarItem(dato:any){
+    console.log(dato.id);     
+    this.datosPortfolio.borrarDatos(this.url, dato.id).subscribe();
+    this.leerDatos();    
+  }
 }

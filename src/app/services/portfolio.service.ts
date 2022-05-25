@@ -23,4 +23,8 @@ export class PortfolioService {
     const apiUrl = `${url}/${body.id}`;
     return this.http.put<void>(apiUrl, body);    
   }
+
+  borrarDatos(url: string, id: string): Observable<any> {
+    return this.http.delete<void>(`${url}/${id}`);
+}
 }

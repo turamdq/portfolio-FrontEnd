@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Andrés Turano",
       "position": "Full Stack Developer Jr.",
-      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta imagen que no andaaaaa"
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta imagen que no andaaaaa1"
     }
   ],
   "header": [
@@ -16,20 +16,31 @@
   ],
   "experience": [
     {
+      "id": "1",
       "name": "Nombre de empresa",
       "image": "../assets/Img/jobs.png",
       "period": "periodo de trabajo",
       "position": "Puesto",
-      "tasks": "e suscipit labore dolorem. Asperiores  praesentium maxime libero eius."
+      "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
     },
     {
+      "id": "2",
       "name": "Nombre de empresa",
       "image": "../assets/Img/jobs.png",
       "period": "periodo de trabajo",
       "position": "Puesto",
-      "tasks": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+      "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
     },
     {
+      "id": "3",
+      "name": "Nombre de empresa",
+      "image": "../assets/Img/jobs.png",
+      "period": "periodo de trabajo",
+      "position": "Puesto",
+      "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+    },
+    {
+      "id": "4",
       "name": "Nombre de empresa",
       "image": "../assets/Img/jobs.png",
       "period": "periodo de trabajo",
