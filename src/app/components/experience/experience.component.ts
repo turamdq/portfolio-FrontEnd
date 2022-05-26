@@ -33,11 +33,13 @@ export class ExperienceComponent implements OnInit {
     });
   }
 
-  borrarItem(dato:any){
-    console.log(dato.id);     
-    this.datosPortfolio.borrarDatos(this.url, dato.id).subscribe();
+  borrarItem(){
+    console.log(this.id);     
+    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
     this.leerDatos();    
   }
+
+  //Obtiene los datos a modificar o el ID del elemento a eliminar
 
   itemAModificar(experience:any){
     this.id = `${experience.id}`;

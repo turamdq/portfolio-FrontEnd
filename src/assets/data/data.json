@@ -16,20 +16,36 @@
   ],
   "experience": [
     {
-      "id": "2",
-      "name": "Toledo1",
-      "image": "../assets/Img/jobs.png",
-      "period": "5 años",
-      "position": "Amigo del jefes",
-      "tasks": "Lorem ipsum dolor, sit amet consectetur  elit. , explicabo veniam praesentium maxime libero eius."
-    },
-    {
       "id": "3",
       "name": "Rafe Carnicerias",
       "image": "../assets/Img/jobs.png",
       "period": "10 años maso ",
       "position": "carniceros en accion5555",
       "tasks": "Soy el item 3 por ahora"
+    },
+    {
+      "id": "5",
+      "name": "Rafe Carnicerias",
+      "image": "../assets/Img/jobs.png",
+      "period": "10 años maso ",
+      "position": "carniceros en accion5555",
+      "tasks": "Soy el item 5 por ahora"
+    },
+    {
+      "id": "7",
+      "name": "Rafe Carnicerias",
+      "image": "../assets/Img/jobs.png",
+      "period": "10 años maso ",
+      "position": "carniceros en accion55557777",
+      "tasks": "Soy el item 7 por ahora"
+    },
+    {
+      "id": "8",
+      "name": "Rafe Carnicerias",
+      "image": "../assets/Img/jobs.png",
+      "period": "10 años maso ",
+      "position": "carniceros en accion5555",
+      "tasks": "Soy el item 8 por ahora"
     }
   ],
   "education": [
