@@ -4,13 +4,13 @@
             <h2 class="titulos-secciones">Experiencia</h2>
 
             <div class="btn-agregar">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregar" >Añadir</button> <!--(click)="agregarItem()"-->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregar">Añadir</button> <!--(click)="agregarItem()"-->
             </div>
         
         </div>
     
-        <div class="list-item" *ngFor = "let experience of experienceList">
-            
+        <ol reversed class="list-item">
+          <li *ngFor="let experience of experienceList">  
                 <div class="seccion-box">
 
                 
@@ -142,9 +142,9 @@
             </div>
           </div>
 
-            
+          </li>  
         
             
-        </div>
+        </ol>
         
     </div>

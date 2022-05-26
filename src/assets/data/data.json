@@ -46,19 +46,37 @@
       "period": "10 años maso ",
       "position": "carniceros en accion5555",
       "tasks": "Soy el item 3 por ahora"
+    },
+    {
+      "id": 1653597831077,
+      "name": "mi casa",
+      "image": "../assets/Img/jobs.png",
+      "period": "siempre",
+      "position": "mantenimiento",
+      "tasks": "mantenimiento gneral"
+    },
+    {
+      "id": 1653598152298,
+      "name": "banco frances2",
+      "image": "../assets/Img/jobs.png",
+      "period": "2002 / 2005",
+      "position": "ayudante",
+      "tasks": "organizacion carpetas clientes"
     }
   ],
   "education": [
     {
-      "name": "Nombre de escuela",
+      "id": "1",
+      "name": "primaria",
       "title": "Título",
-      "description": "Lorem ipsumlabore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
+      "description": "primaria",
       "image": "../assets/Img/educacion-logo.png"
     },
     {
-      "name": "Nombre de escuela",
-      "title": "Título",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius.",
+      "id": 1653600846498,
+      "name": "tecnica 3",
+      "title": "secundario",
+      "description": "undefined",
       "image": "../assets/Img/educacion-logo.png"
     }
   ]
