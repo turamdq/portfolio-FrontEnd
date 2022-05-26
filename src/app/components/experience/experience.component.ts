@@ -9,9 +9,11 @@ import { PortfolioService } from '../../services/portfolio.service';
 })
 export class ExperienceComponent implements OnInit {
 
-  url:string="http://localhost:3000/experience/";
+  url:string="http://localhost:3000/experience";
   
-  experienceList:any;  
+  experienceList:any;
+  
+  nuevoId: number = 0;
 
   id:string = "";
   name:string="";
@@ -33,8 +35,15 @@ export class ExperienceComponent implements OnInit {
     });
   }
 
-  borrarItem(){
-    console.log(this.id);     
+  agregarItem() {
+    // console.log(this.name);
+    this.nuevoId = new Date().getTime();
+    console.log(this.nuevoId)
+    const body = {id: this.nuevoId, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks}
+    this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
+  }
+
+  borrarItem(){         
     this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
     this.leerDatos();    
   }

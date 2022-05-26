@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioService {
 
+  
+
   constructor(private http:HttpClient) { }
 
   
@@ -19,13 +21,16 @@ export class PortfolioService {
     
   }
 
-  modificarDatos(url: string, body: any): Observable<any> {
-    const apiUrl = `${url}/${body.id}`;
-    return this.http.put<void>(apiUrl, body);
+  modificarDatos(url: string, body: any): Observable<any> {    
+    return this.http.put<void>(`${url}/${body.id}`, body);
         
   }
 
   borrarDatos(url: string, id: string): Observable<any> {
     return this.http.delete<void>(`${url}/${id}`);
+
 }
+  agregarNuevo(url: string, body: any): Observable<any>{
+    return this.http.post<void>(`${url}`, body)
+  }
 }
