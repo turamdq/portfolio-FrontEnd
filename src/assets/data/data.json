@@ -17,19 +17,11 @@
   "experience": [
     {
       "id": "3",
-      "name": "Rafe Carnicerias8888",
+      "name": "Rafe Carnicerias9999",
       "image": "../assets/Img/jobs.png",
       "period": "10 años maso ",
       "position": "carniceros en accion5555",
       "tasks": "Soy el item 3 por ahora"
-    },
-    {
-      "id": "5",
-      "name": "Carnicerias",
-      "image": "../assets/Img/jobs.png",
-      "period": "455",
-      "position": "carniceros ",
-      "tasks": "Soy el item 555464 por ahora"
     },
     {
       "id": "8",
@@ -46,6 +38,14 @@
       "period": "2 dias",
       "position": "carrero",
       "tasks": "mover cahanguitos"
+    },
+    {
+      "id": 1653547153790,
+      "name": "Rafe Carnicerias77777",
+      "image": "../assets/Img/jobs.png",
+      "period": "10 años maso ",
+      "position": "carniceros en accion5555",
+      "tasks": "Soy el item 3 por ahora"
     }
   ],
   "education": [

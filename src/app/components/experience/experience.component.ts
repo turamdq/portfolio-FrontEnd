@@ -37,8 +37,7 @@ export class ExperienceComponent implements OnInit {
 
   agregarItem() {
     // console.log(this.name);
-    this.nuevoId = new Date().getTime();
-    console.log(this.nuevoId)
+    this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
     const body = {id: this.nuevoId, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks}
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
   }
