@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Andrés Turano",
       "position": "Full Stack Developer Jr.",
-      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta imagen que no andaaaaa1"
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta "
     }
   ],
   "header": [
@@ -17,19 +17,19 @@
   "experience": [
     {
       "id": "2",
-      "name": "Nombre de empresa",
+      "name": "Toledo1",
       "image": "../assets/Img/jobs.png",
-      "period": "periodo de trabajo",
-      "position": "Puesto",
-      "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+      "period": "5 años",
+      "position": "Amigo del jefes",
+      "tasks": "Lorem ipsum dolor, sit amet consectetur  elit. , explicabo veniam praesentium maxime libero eius."
     },
     {
       "id": "3",
-      "name": "Nombre de empresa",
+      "name": "Rafe Carnicerias",
       "image": "../assets/Img/jobs.png",
-      "period": "periodo de trabajo",
-      "position": "Puesto",
-      "tasks": "Lorem ipsum dolor, sit amet consectetur adipigggggggggggggggggggggggggggggggggggggggggsicing elit. Vitae voluptates hic voluptatibus quia cupiditate maxime suscipit labore dolorem. Asperiores unde cumque nam ad ullam, explicabo veniam praesentium maxime libero eius."
+      "period": "10 años maso ",
+      "position": "carniceros en accion5555",
+      "tasks": "Soy el item 3 por ahora"
     }
   ],
   "education": [
