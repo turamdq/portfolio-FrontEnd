@@ -8,8 +8,7 @@ import { PortfolioService } from '../../services/portfolio.service';
 })
 export class HeaderComponent implements OnInit {
 
-  datosList:any;
-  
+  datosList:any;  
   url:string="http://localhost:3000/header/";
 
   constructor(private datosPortfolio:PortfolioService) { }
@@ -17,21 +16,23 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.leerDatos();
   }
-//Funcion para obtener datos mediante el servicio
 
-leerDatos(){
-  this.datosPortfolio.obtenerDatos(this.url).subscribe((response)=>{
-    this.datosList = response;           
-  });
-}
+  //Funcion para obtener datos mediante el servicio
 
-guardarCambios(dato:any){
-  console.log(dato);     
-  this.datosPortfolio.modificarDatos(this.url, dato).subscribe();    
-}
+  leerDatos(){
+    this.datosPortfolio.obtenerDatos(this.url).subscribe((response)=>{
+      this.datosList = response;           
+    });
+  }
 
-//vuelve a Cargar los datos guardados en la BDD
-descartarCambios() {
-  return this.leerDatos();    
-}
+  guardarCambios(dato:any){
+    console.log(dato);     
+    this.datosPortfolio.modificarDatos(this.url, dato).subscribe();    
+  }
+
+  //vuelve a Cargar los datos guardados en la BDD
+
+  descartarCambios() {
+    return this.leerDatos();    
+  }
 }

@@ -17,7 +17,7 @@
   "experience": [
     {
       "id": "3",
-      "name": "Rafe Carnicerias1",
+      "name": "Rafe Carnicerias",
       "image": "../assets/Img/jobs.png",
       "period": "10 años maso ",
       "position": "carniceros en accion5555",
@@ -30,14 +30,6 @@
       "period": "2002 / 2005",
       "position": "ayudante",
       "tasks": "organizacion carpetas clientes"
-    },
-    {
-      "id": 1653616748284,
-      "name": "1",
-      "image": "",
-      "period": "1",
-      "position": "1",
-      "tasks": "1"
     }
   ],
   "education": [
@@ -49,17 +41,10 @@
       "image": "../assets/Img/educacion-logo.png"
     },
     {
-      "id": 1653600846498,
-      "name": "tecnica 31",
-      "title": "secundario",
+      "id": 1653621260239,
+      "name": "2",
+      "title": "2",
       "description": "2",
-      "image": "../assets/Img/educacion-logo.png"
-    },
-    {
-      "id": 1653616736121,
-      "name": "1",
-      "title": "1",
-      "description": "1",
       "image": ""
     }
   ]

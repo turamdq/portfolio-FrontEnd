@@ -1,145 +1,125 @@
 <div class="educacion">
-    <div>
-        <h2 class="titulos-secciones">Educación</h2>
-
-        <div class="btn-agregar">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarEducation">Añadir</button>
-        </div>
-    
+  <div>
+    <h2 class="titulos-secciones">Educación</h2>
+    <div class="btn-agregar">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+        data-bs-target="#agregarEducation">Añadir</button>
     </div>
+  </div>
 
-    <ul class="list-item">
-        <li *ngFor="let education of educationList">
-            <div class="seccion-box">
+  <!-- Lista de items en educacion -->
+  
+  <ul class="list-item">
+    <li *ngFor="let education of educationList">
+      <div class="seccion-box">
+        <div>
+          <img [src]="education.image" alt="">
+        </div>
+        <div class="inbox">
+          <h4>{{education.name}}</h4>
+          <h5>{{education.title}}</h5>
+          <p>{{education.description}}</p>
+        </div>
+        <div class="botones">
+          <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicionEducation"
+            (click)="itemAModificar(education)"><i class="fa-solid fa-pencil"></i></button>
+          <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarEducation"
+            (click)="itemAModificar(education)"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </div>
 
-            
-            
-                <div>
+      <!-- Modal de Bootstrap confirmacion de eliminacion-->
 
-                    <img [src]="education.image" alt="">
-
-                </div>
-
-                <div class="inbox">
-                    
-                    <h4>{{education.name}}</h4>
-                    
-                    <h5>{{education.title}}</h5>
-                    
-                    <p>{{education.description}}</p>
-                </div>
-
-                <div class="botones">
-
-                <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicionEducation" (click)="itemAModificar(education)"><i class="fa-solid fa-pencil"></i></button>
-                <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarEducation" (click)="itemAModificar(education)"><i class="fa-solid fa-trash"></i></button>
-
-                </div>
-
+      <div class="modal fade " id="eliminarEducation" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-body" style="text-align: center">
+              <p><b>Esta seguro de eliminar este item ?</b></p>
             </div>
-
-
-            <!-- Modal de Bootstrap confirmacion de eliminacion-->
-        <div class="modal fade " id="eliminarEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-sm">
-              <div class="modal-content">
-                <!-- <div class="modal-header"> -->
-                  <!-- <h5 class="modal-title" id="exampleModalLabel" style="text-align: center">Eliminar item</h5> -->
-                  <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
-                <!-- </div> -->
-                <div class="modal-body" style="text-align: center">
-                    
-        
-                    <p><b>Esta seguro de eliminar este item ?</b></p>
-                
-                    
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="borrarItem()">Eliminar</button>
-                </div>
-              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                (click)="borrarItem()">Eliminar</button>
             </div>
           </div>
+        </div>
+      </div>
 
+      <!-- Modal de Bootstrap Edicion -->
 
-          <!-- Modal de Bootstrap Edicion -->
-
-
-          <div class="modal fade " id="edicionEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modificar sección Educación</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="descartarCambios()"></button>
-                </div>
-                <div class="modal-body">
-                    
-               
-                <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>  
-                <input id="nombre" class="form-control" type="text" placeholder="Nombre de la institución" aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
-                <label for="titulo" style="margin-bottom: 10px"><b>Título:</b></label>
-                <input id="titulo" class="form-control" type="text" placeholder="Título obtenido" aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="title">
-                <label for="descripcion" style="margin-bottom: 10px"><b>Descripción:</b></label>  
-                <input id="descripcion" class="form-control" type="text" placeholder="Descripción de lo aprendido" aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="description">
-                                
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">URL de imagen</span>
-                    <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="image">
-                </div>
-                
-
-                
-                    
-                </div>
-                <div class="modal-footer" >
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="descartarCambios()">Cancelar</button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="guardarCambios()">Guardar</button>
-                </div>
+      <div class="modal fade " id="edicionEducation" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modificar sección Educación</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                (click)="descartarCambios()"></button>
+            </div>
+            <div class="modal-body">
+              <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
+              <input id="nombre" class="form-control" type="text" placeholder="Nombre de la institución"
+                aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
+              <label for="titulo" style="margin-bottom: 10px"><b>Título:</b></label>
+              <input id="titulo" class="form-control" type="text" placeholder="Título obtenido"
+                aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="title">
+              <label for="descripcion" style="margin-bottom: 10px"><b>Descripción:</b></label>
+              <input id="descripcion" class="form-control" type="text" placeholder="Descripción de lo aprendido"
+                aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="description">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">URL de imagen</span>
+                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                  [(ngModel)]="image">
               </div>
             </div>
-          </div>
-
-
-          <!-- Modal de Bootstrap Añadir -->
-
-
-          <div class="modal fade " id="agregarEducation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Modificar sección Educación</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="descartarCambios()"></button>
-                </div>
-                <div class="modal-body">
-                    
-               
-                <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>  
-                <input id="nombre" class="form-control" type="text" placeholder="Nombre de la institución" aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
-                <label for="perido" style="margin-bottom: 10px"><b>Título:</b></label>
-                <input class="form-control" type="text" placeholder="Título obtenido" aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="title">
-                <label for="posicion" style="margin-bottom: 10px"><b>Descripción:</b></label>  
-                <input class="form-control" type="text" placeholder="Descripción de lo aprendido" aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="description">                
-                <label for="basic-url" class="form-label"></label>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">URL de imagen</span>
-                    <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="image">
-                </div>
-                
-
-                
-                    
-                </div>
-                <div class="modal-footer" >
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="descartarCambios()">Cancelar</button>
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="agregarItem()">Guardar</button>
-                </div>
-              </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                (click)="descartarCambios()">Cancelar</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                (click)="guardarCambios()">Guardar</button>
             </div>
           </div>
+        </div>
+      </div>
 
-        </li>
-    </ul>
-    
+      <!-- Modal de Bootstrap Añadir -->
 
+      <div class="modal fade " id="agregarEducation" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modificar sección Educación</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                (click)="descartarCambios()"></button>
+            </div>
+            <div class="modal-body">
+              <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
+              <input id="nombre" class="form-control" type="text" placeholder="Nombre de la institución"
+                aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
+              <label for="perido" style="margin-bottom: 10px"><b>Título:</b></label>
+              <input class="form-control" type="text" placeholder="Título obtenido" aria-label="default input example"
+                style="margin-bottom: 30px" [(ngModel)]="title">
+              <label for="posicion" style="margin-bottom: 10px"><b>Descripción:</b></label>
+              <input class="form-control" type="text" placeholder="Descripción de lo aprendido"
+                aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="description">
+              <label for="basic-url" class="form-label"></label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">URL de imagen</span>
+                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                  [(ngModel)]="image">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                (click)="descartarCambios()">Cancelar</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                (click)="agregarItem()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>

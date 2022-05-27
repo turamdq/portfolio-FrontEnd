@@ -11,8 +11,7 @@ export class ExperienceComponent implements OnInit {
 
   url:string="http://localhost:3000/experience";
   
-  experienceList:any;
-  
+  experienceList:any;  
   nuevoId: number = 0;
 
   id: string = "";

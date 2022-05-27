@@ -3,8 +3,7 @@
     border: 1px solid rgb(185, 184, 184);
     border-radius: 8px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin: 100px 35px;
-    
+    margin: 100px 35px;    
 }
 
 .botones {
@@ -21,33 +20,23 @@
 
 .btn-edicion {
    align-self: flex-start;    
-   background-color: rgb(255, 255, 255);
-   /* color: rgb(46, 43, 211); */
-   
-   /* font-size: 20px;   */
+   background-color: rgb(255, 255, 255);   
 }
 
 .btn-eliminar:hover {
-   
-    
     border: 1px solid rgb(17, 90, 201);
     border-radius: 10%;
-  }
+}
 
 .btn-edicion:hover {
-    
-    
     border: 1px solid rgb(17, 90, 201);
     border-radius: 10%;
-  }   
+}   
 
 .btn-eliminar {
    align-self: flex-start;
    margin-left: 10px;
-   background-color: rgb(255, 255, 255);
-   /* color: rgb(226, 19, 19); */
-   
-   /* font-size: 20px; */
+   background-color: rgb(255, 255, 255);   
 }
 
 .titulos-secciones {
@@ -70,18 +59,16 @@
     margin: 3%;
 }
 
-.seccion-box img { /*logo de empresa-escuela*/
+.seccion-box img {  /*logo de empresa-escuela*/
     width: 130px;
     margin: 0 auto; 
     border-radius: 8px;  
 }
 
-.seccion-box p,h4,h5 { /*parrafos de descripcion*/
-    width: 90%;
-    /* border: 1px solid rgb(223, 0, 0); */
+.seccion-box p,h4,h5 {  /*parrafos de descripcion*/
+    width: 90%;    
     padding: 10px;
-    margin: 0 auto;
-    /*text-align: center;*/
+    margin: 0 auto;    
     text-align: justify; 
     color: rgb(0, 0, 0);   
 }
@@ -94,9 +81,4 @@
 
 .inbox {
     width: 100%;
-   }
-
-/* .informacion {
-    border: 1px solid;
-    
-} */
+}

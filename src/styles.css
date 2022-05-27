@@ -1,68 +1,52 @@
-
 @media (max-width: 590px) {
-    
-    .flex-container {
-    display:flex;
-    
+  .flex-container {
+    display: flex;
+
     flex-direction: column;
-    
+
     height: auto;
-   
-}
-.redes-sociales {
+  }
+  .redes-sociales {
     text-align: center;
     margin-left: 0;
+  }
 
-}
-
-.btn-portada {
+  .btn-portada {
     right: 10em;
-}
-    
-    
-    .container-sobre-mi {
-        flex-direction: column;
-        justify-content: center;
-        
-    }
+  }
 
-.info-usuario p{
+  .container-sobre-mi {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .info-usuario p {
     font-size: 20px;
     font-weight: bold;
-    color: rgb(0, 0, 0);
-    /* margin-left: 150px;     */
-    
-    
-}
+    color: rgb(0, 0, 0);    
+  }
 
-.texto-sobre-mi {        
+  .texto-sobre-mi {
     margin-top: 30px;
     flex-direction: column;
-    align-items: flex-end; 
-}
-    
-    
+    align-items: flex-end;
+  }
 
-    .botones {
-        
-        margin-left: 109px;        
-        margin-top: 30px;
-    }
+  .botones {
+    margin-left: 109px;
+    margin-top: 30px;
+  }
 
-    .titulos-secciones {
-        text-align: center;
-        margin-bottom: 40px;
-    }
+  .titulos-secciones {
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
-    
-    .btn-agregar {
-        margin-bottom: 30px;
-            
-    }
+  .btn-agregar {
+    margin-bottom: 30px;
+  }
 
-    .seccion-box {
-        flex-direction: column;
-        
-    }
-    
+  .seccion-box {
+    flex-direction: column;
+  }
 }

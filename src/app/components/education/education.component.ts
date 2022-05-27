@@ -13,11 +13,10 @@ export class EducationComponent implements OnInit {
   url:string="http://localhost:3000/education";
   
   educationList: any;
-
   nuevoId: number = 0;
 
   id: string = "";
-  name: string="";
+  name: string= "";
   title: string = "";
   description: string = "";
   image: string = ""; 
@@ -36,7 +35,7 @@ export class EducationComponent implements OnInit {
       this.educationList = response;      
     });
     this.id = "";
-    this.name ="";
+    this.name = "";
     this.title = "";
     this.description = "";
     this.image = "";    
@@ -76,6 +75,6 @@ export class EducationComponent implements OnInit {
     //vuelve a Cargar los datos guardados en la BDD
     
     descartarCambios() {
-      return this.leerDatos();    
+      this.leerDatos();          
     }
 }

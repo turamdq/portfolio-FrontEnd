@@ -1,101 +1,94 @@
 <div *ngFor="let dato of datosList">
-<div class="flex-container">
+  <div class="flex-container">
+
     <!--Logo - Redes sociales - Boton de acceso-->
 
     <nav class="logoArgProg">
-        <div>
+      <div>
         <img src="../assets/Img/APLogo-20-20-200px.png" alt="">
         <span id="textoAP">- #Yo Programo</span>
-        </div>
+      </div>
     </nav>
-    
     <div class="espacio">
-        <!-- Solo un espacio vacio -->
+      <!-- Solo un espacio vacio -->
     </div>
-
-    
     <div class="redes-acceso">
-        <div class="redes-sociales">
-            <a href="#"><i class="fa-brands fa-facebook icons"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope icons"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin icons"></i></a>            
-        </div>
-        <div class="boton-acceso">
+      <div class="redes-sociales">
+        <a href="#"><i class="fa-brands fa-facebook icons"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope icons"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin icons"></i></a>
+      </div>
+      <div class="boton-acceso">
         <button type="button" class="btn btn-warning">Acceder</button>
-        </div>
-    </div>
-
-</div>
-
-<!--imagen de portada + imagen de usuario superpuesta-->
-<div class="container-portada">
-    
-    
-    <img class="img-fluid imagenPortada" src={{dato.backImage}} alt="">
-    
-    <button class="btn btn-portada"><i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#imagenPortada"></i></button>
-    
-    
-    <img class="img-fluid imagenUsuario" src={{dato.image}}>         <!--[src]="miPortfolio.image"-->
-    
-    <button class="btn btn-usuario"><i class="fa-solid fa-pencil" data-bs-toggle="modal" data-bs-target="#imagenUsuario"></i></button>
-   
-
-</div>
-
-
-<!-- Modal de Bootstrap imagen portada -->
-
-    <div class="modal fade " id="imagenPortada" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="infoUsuarioLabel">Cambiar Imagen de Portada</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="descartarCambios()"></button>
-            </div>
-            <div class="modal-body" style="text-align: left; margin-bottom: 50px;">
-  
-                <label for="basic-url" class="form-label"></label>
-                <div class="input-group mb-3" style="margin-top: 40px">
-                  <span class="input-group-text" id="basic-addon3">URL</span>
-                  <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="dato.backImage">
-                </div>  
-                         
-            </div>
-            <div class="modal-footer" >
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="descartarCambios()">Cancelar</button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="guardarCambios(dato)">Guardar</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-<!-- Modal de Bootstrap imagen Usuario -->
-
-<div class="modal fade " id="imagenUsuario" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="infoUsuarioLabel">Cambiar Imagen de Portada</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="descartarCambios()"></button>
-      </div>
-      <div class="modal-body" style="text-align: left; margin-bottom: 50px;">
-
-          <label for="basic-url" class="form-label"></label>
-          <div class="input-group mb-3" style="margin-top: 40px">
-            <span class="input-group-text" id="basic-addon3">URL</span>
-            <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3" [(ngModel)]="dato.image">
-          </div>  
-                   
-      </div>
-      <div class="modal-footer" >
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="descartarCambios()">Cancelar</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="guardarCambios(dato)">Guardar</button>
       </div>
     </div>
   </div>
-</div>
+
+  <!--imagen de portada + imagen de usuario superpuesta-->
+
+  <div class="container-portada">
+    <img class="img-fluid imagenPortada" src={{dato.backImage}} alt="">
+    <button class="btn btn-portada"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
+        data-bs-target="#imagenPortada"></i></button>
+    <img class="img-fluid imagenUsuario" src={{dato.image}}>
+    <button class="btn btn-usuario"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
+        data-bs-target="#imagenUsuario"></i></button>
+  </div>
 
 
+  <!-- Modal de Bootstrap imagen portada -->
+
+  <div class="modal fade " id="imagenPortada" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoUsuarioLabel">Cambiar Imagen de Portada</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            (click)="descartarCambios()"></button>
+        </div>
+        <div class="modal-body" style="text-align: left; margin-bottom: 50px;">
+          <label for="basic-url" class="form-label"></label>
+          <div class="input-group mb-3" style="margin-top: 40px">
+            <span class="input-group-text" id="basic-addon3">URL</span>
+            <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+              [(ngModel)]="dato.backImage">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            (click)="descartarCambios()">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+            (click)="guardarCambios(dato)">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Bootstrap imagen Usuario -->
+
+  <div class="modal fade " id="imagenUsuario" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoUsuarioLabel">Cambiar Imagen de Portada</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+            (click)="descartarCambios()"></button>
+        </div>
+        <div class="modal-body" style="text-align: left; margin-bottom: 50px;">
+          <label for="basic-url" class="form-label"></label>
+          <div class="input-group mb-3" style="margin-top: 40px">
+            <span class="input-group-text" id="basic-addon3">URL</span>
+            <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+              [(ngModel)]="dato.image">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+            (click)="descartarCambios()">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+            (click)="guardarCambios(dato)">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

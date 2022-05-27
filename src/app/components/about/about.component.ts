@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 
-
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -9,17 +8,14 @@ import { PortfolioService } from '../../services/portfolio.service';
 })
 export class AboutComponent implements OnInit {
 
-
   datosList:any;
-  // backupDatos:any;
   url:string="http://localhost:3000/about/";
-  
+
 
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.leerDatos();
-    // this.datosList = this.backupDatos
+    this.leerDatos();    
   }
 
   //Funcion para obtener datos mediante el servicio
@@ -37,6 +33,6 @@ export class AboutComponent implements OnInit {
 
   //vuelve a Cargar los datos guardados en la BDD
   descartarCambios() {
-    return this.leerDatos();    
+    this.leerDatos();    
   }
 }
