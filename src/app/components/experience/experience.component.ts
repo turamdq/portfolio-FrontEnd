@@ -15,31 +15,37 @@ export class ExperienceComponent implements OnInit {
   
   nuevoId: number = 0;
 
-  id:string = "";
-  name:string="";
-  image:string = ""
-  period: string = ""
-  position:string = "";
+  id: string = "";
+  name: string="";
+  image: string = "";
+  period: string = "";
+  position: string = "";
   tasks: string = "";  
 
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
-    this.leerDatos();    
+    this.leerDatos();        
   }
 
   //Funcion para obtener datos mediante el servicio
   leerDatos(){
     this.datosPortfolio.obtenerDatos(this.url).subscribe((response)=>{
-      this.experienceList = response;      
+      this.experienceList = response;            
     });
+    this.id = "";
+    this.name ="";
+    this.image = "";
+    this.period = "";
+    this.position = "";
+    this.tasks = "";
   }
 
-  agregarItem() {
-    // console.log(this.name);
+  agregarItem() {    
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
-    const body = {id: this.nuevoId, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks}
+    const body = {id: this.nuevoId, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
+    this.leerDatos();
   }
 
   borrarItem(){         
@@ -59,14 +65,14 @@ export class ExperienceComponent implements OnInit {
   }
 
   guardarCambios(){
-    const body = {id: this.id, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks}      
+    const body = {id: this.id, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks};     
     this.datosPortfolio.modificarDatos(this.url, body).subscribe();
-    this.leerDatos();
+    this.leerDatos();    
   }
 
   //vuelve a Cargar los datos guardados en la BDD
   
   descartarCambios() {
-    return this.leerDatos();    
-  }
+    this.leerDatos();       
+  }  
 }

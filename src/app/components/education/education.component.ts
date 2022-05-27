@@ -16,11 +16,11 @@ export class EducationComponent implements OnInit {
 
   nuevoId: number = 0;
 
-  id:string = "";
-  name:string="";
+  id: string = "";
+  name: string="";
   title: string = "";
-  description:string = "";
-  image:string = ""; 
+  description: string = "";
+  image: string = ""; 
   
 
   constructor(private datosPortfolio:PortfolioService) { }
@@ -35,6 +35,11 @@ export class EducationComponent implements OnInit {
     this.datosPortfolio.obtenerDatos(this.url).subscribe((response)=>{
       this.educationList = response;      
     });
+    this.id = "";
+    this.name ="";
+    this.title = "";
+    this.description = "";
+    this.image = "";    
   }
 
     //Funcion para obtener datos mediante el servicio
@@ -42,8 +47,9 @@ export class EducationComponent implements OnInit {
     agregarItem() {
       // console.log(this.name);
       this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
-      const body = {id: this.nuevoId, name: this.name, title: this.title, description: this.description, image: this.image}
+      const body = {id: this.nuevoId, name: this.name, title: this.title, description: this.description, image: this.image};
       this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
+      this.leerDatos();
     }
   
     borrarItem(){         
@@ -57,12 +63,12 @@ export class EducationComponent implements OnInit {
       this.id = `${education.id}`;
       this.name = `${education.name}`;
       this.title = `${education.title}`;
-      this.description = `${education.period}`;
+      this.description = `${education.description}`;
       this.image = `${education.image}`;
     }
   
     guardarCambios(){
-      const body = {id: this.id, name: this.name, title: this.title, description: this.description, image: this.image}      
+      const body = {id: this.id, name: this.name, title: this.title, description: this.description, image: this.image};      
       this.datosPortfolio.modificarDatos(this.url, body).subscribe();
       this.leerDatos();
     }
