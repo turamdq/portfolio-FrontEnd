@@ -1,9 +1,21 @@
 <div class="titulo-seccion"><h1>Proyectos</h1></div>
 
+<div class="btn-agregar">
+    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#agregarProyecto">Añadir</button>      
+  </div>
+
 <div class="proyectos">
     <ul class="list-item">
-        <li *ngFor="let project of projectsList">
-            <div class="card" style="width: 24rem;">
+        <li class="li1" *ngFor="let project of projectsList">
+
+            <div class="botones">
+                <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#editarProyecto"
+                  (click)="itemAModificar(project)"><i class="fa-solid fa-pencil"></i></button>
+                <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarProyecto"
+                  (click)="itemAModificar(project)"><i class="fa-solid fa-trash"></i></button>
+            </div>
+            
+            <div class="card" style="width: 20rem;">
                 <img [src]="project.image" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">{{project.name}}</h5>
@@ -15,7 +27,118 @@
                 <div class="card-body">
                 <a href="#" class="card-link">{{project.link}}</a>        
                 </div>
-            </div>  
+            </div>
+
+            <!-- Modal de Bootstrap confirmacion de eliminacion-->
+
+      <div class="modal fade " id="eliminarProyecto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-body" style="text-align: center">
+              <p><b>Esta seguro de eliminar este item ?</b></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                (click)="borrarItem()">Eliminar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+            <!-- Modal de Bootstrap Añadir -->
+
+      <div class="modal fade " id="agregarProyecto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modificar sección Proyectos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                (click)="descartarCambios()"></button>
+            </div>
+            <div class="modal-body">
+              <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
+              <input id="nombre" class="form-control" type="text" placeholder="Nombre del proyecto"
+                aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
+              <label for="perido" style="margin-bottom: 10px"><b>Descripción:</b></label>
+              <input class="form-control" type="text" placeholder="Descripción" aria-label="default input example"
+                style="margin-bottom: 30px" [(ngModel)]="description">
+              <label for="posicion" style="margin-bottom: 10px"><b>Fecha:</b></label>
+              <input class="form-control" type="text" placeholder="Fecha de creación" aria-label="default input example"
+                style="margin-bottom: 30px" [(ngModel)]="date">
+              <!-- <label for="tareas" style="margin-bottom: 10px"><b>Tareas realizadas:</b></label>
+              <input class="form-control" type="text" placeholder="Tareas realizadas" aria-label="default input example"
+                style="margin-bottom: 30px" [(ngModel)]="tasks"> -->
+                <label for="basic-url" class="form-label"></label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">URL de la imagen</span>
+                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                  [(ngModel)]="image">
+              </div>
+              <label for="basic-url2" class="form-label"></label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">URL del Proyecto</span>
+                <input type="url" class="form-control" id="basic-url2" aria-describedby="basic-addon3"
+                  [(ngModel)]="link">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                (click)="descartarCambios()">Cancelar</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                (click)="agregarItem()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal boostrap de edicion -->
+
+      <div class="modal fade " id="editarProyecto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modificar sección Proyectos</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                (click)="descartarCambios()"></button>
+            </div>
+            <div class="modal-body">
+              <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
+              <input id="nombre" class="form-control" type="text" placeholder="Nombre del proyecto"
+                aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
+              <label for="perido" style="margin-bottom: 10px"><b>Descripción:</b></label>
+              <input class="form-control" type="text" placeholder="Descripción" aria-label="default input example"
+                style="margin-bottom: 30px" [(ngModel)]="description">
+              <label for="posicion" style="margin-bottom: 10px"><b>Fecha:</b></label>
+              <input class="form-control" type="text" placeholder="Fecha de creación" aria-label="default input example"
+                style="margin-bottom: 30px" [(ngModel)]="date">
+              <!-- <label for="tareas" style="margin-bottom: 10px"><b>Tareas realizadas:</b></label>
+              <input class="form-control" type="text" placeholder="Tareas realizadas" aria-label="default input example"
+                style="margin-bottom: 30px" [(ngModel)]="tasks"> -->
+                <label for="basic-url" class="form-label"></label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">URL de la imagen</span>
+                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                  [(ngModel)]="image">
+              </div>
+              <label for="basic-url2" class="form-label"></label>
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon3">URL del Proyecto</span>
+                <input type="url" class="form-control" id="basic-url2" aria-describedby="basic-addon3"
+                  [(ngModel)]="link">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                (click)="descartarCambios()">Cancelar</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                (click)="guardarCambios()">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
         </li>
-    </ul> 
+    </ul>
+</div> 
       

@@ -44,7 +44,7 @@ export class ProjectsComponent implements OnInit {
 
   agregarItem() {    
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
-    const body = {id: this.nuevoId, name:this.name, description:this.description, date: this.date, image: this.image, link: this.link};
+    const body = {id: this.nuevoId, name:this.name, description: this.description, date: this.date, image: this.image, link: this.link};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     this.leerDatos();
     this.leerDatos();

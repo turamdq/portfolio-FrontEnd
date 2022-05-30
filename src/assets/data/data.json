@@ -47,6 +47,13 @@
       "title": "Título",
       "description": "hh",
       "image": "../assets/Img/educacion-logo.png"
+    },
+    {
+      "id": 1653945511321,
+      "name": "caasssssaaaa",
+      "title": "ssf",
+      "description": "asf",
+      "image": ""
     }
   ],
   "projects": [
@@ -61,7 +68,7 @@
     {
       "id": 2,
       "name": "Proyecto integrador AP",
-      "description": "Realizacion de un Portfolio Web, tanto front-end como back-end",
+      "description": "Realizacion de un Portfolio Web, tanto front-end como back-end.",
       "date": "FECHA",
       "image": "../../../assets/Img/proyecto2.jpg",
       "link": "https://"

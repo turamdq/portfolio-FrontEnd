@@ -1,18 +1,35 @@
-.proyectos {
-    /* display: flex; */
-    /* flex-wrap: column; */
-    /* flex-wrap: wrap; */
-    justify-content: space-around;
+.proyectos {    
     margin-top: 100px;
 }
 
 .titulo-seccion {
     text-align: center;
     margin-bottom: 100px;
-    margin-top: 150px;
+    margin-top: 100px;
 }
 
+.btn-agregar {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.botones {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.btn-eliminar:hover {
+    border: 1px solid rgb(17, 90, 201);
+    border-radius: 10%;
+}
+
+.btn-edicion:hover {
+    border: 1px solid rgb(17, 90, 201);
+    border-radius: 10%;
+}   
+
 .card {
+    margin: 5px !important;
     margin-bottom: 70px !important;    
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 40px 0 rgba(0, 0, 0, 0.19);
 }
@@ -24,11 +41,8 @@
 .list-item {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     list-style-type: none !important;
-    padding-left: 0px;    
-}
-
-.card {
-    margin: 10px !important;
+    padding-left: 0px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;    
 }
