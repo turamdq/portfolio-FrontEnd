@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Andrés Turano",
       "position": "Full Stack Developer Jr.",
-      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta y estamos haciendo una prueba yo y i gata que no para de llorar para poder salir a las 12 de la noche de un sabdo ya dminos1"
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta y estamos haciendo una prueba yo y i gata que no para de llorar para poder salir a las 12 de la noche de un sabdo ya dminos"
     }
   ],
   "header": [
@@ -43,10 +43,36 @@
   "education": [
     {
       "id": "1",
-      "name": "primaria12345",
+      "name": "primaria",
       "title": "Título",
       "description": "hh",
       "image": "../assets/Img/educacion-logo.png"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Modificacion de porfolio",
+      "description": "Modificacion de un porfolio web alojado en github",
+      "fecha": "FECHA",
+      "image": "../../../assets/Img/proyecto1.jpg",
+      "link": "https://"
+    },
+    {
+      "id": 2,
+      "name": "Proyecto integrador AP",
+      "description": "Realizacion de un Portfolio Web, tanto front-end como back-end",
+      "fecha": "FECHA",
+      "image": "../../../assets/Img/proyecto2.jpg",
+      "link": "https://"
+    },
+    {
+      "id": 3,
+      "name": "Lista de Tareas",
+      "description": "Realizacion de una simple app, la cual guarda las tareas del día.",
+      "fecha": "FECHA",
+      "image": "../../../assets/Img/proyecto2.jpg",
+      "link": "https://"
     }
   ]
 }
