@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 import Swal from 'sweetalert2';
-
 // import { Portfolio } from '../../interfaces/portfolio'; APLICAR INTERFACE !!!!!!
 
 @Component({
@@ -13,7 +12,7 @@ export class ExperienceComponent implements OnInit {
 
   url:string="http://localhost:3000/experience";
   
-  loggedIn:boolean = false;
+  // loggedIn:boolean = false;
   experienceList:any;   
   nuevoId: number = 0;
 

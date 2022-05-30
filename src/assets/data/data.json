@@ -54,7 +54,7 @@
       "id": 1,
       "name": "Modificacion de porfolio",
       "description": "Modificacion de un porfolio web alojado en github",
-      "fecha": "FECHA",
+      "date": "FECHA",
       "image": "../../../assets/Img/proyecto1.jpg",
       "link": "https://"
     },
@@ -62,7 +62,7 @@
       "id": 2,
       "name": "Proyecto integrador AP",
       "description": "Realizacion de un Portfolio Web, tanto front-end como back-end",
-      "fecha": "FECHA",
+      "date": "FECHA",
       "image": "../../../assets/Img/proyecto2.jpg",
       "link": "https://"
     },
@@ -70,7 +70,7 @@
       "id": 3,
       "name": "Lista de Tareas",
       "description": "Realizacion de una simple app, la cual guarda las tareas del día.",
-      "fecha": "FECHA",
+      "date": "FECHA",
       "image": "../../../assets/Img/proyecto2.jpg",
       "link": "https://"
     }

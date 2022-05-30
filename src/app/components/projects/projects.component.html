@@ -1,45 +1,21 @@
 <div class="titulo-seccion"><h1>Proyectos</h1></div>
 
-<div class="proyectos"> 
-    <div class="card" style="width: 24rem;">
-        <img src="../../../assets/Img/proyecto1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Nombre del Proyecto</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-        <li class="list-group-item">FECHA</li>        
-        </ul>
-        <div class="card-body">
-        <a href="#" class="card-link">Link</a>        
-        </div>
-    </div>
-
-    <div class="card" style="width: 24rem;">
-        <img src="../../../assets/Img/proyecto2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Nombre del Proyecto</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-        <li class="list-group-item">FECHA</li>        
-        </ul>
-        <div class="card-body">
-        <a href="#" class="card-link">Link</a>        
-        </div>
-    </div>
-
-    <div class="card" style="width: 24rem;">
-        <img src="../../../assets/Img/proyecto3.JPG" class="card-img-top" alt="...">
-        <div class="card-body">
-        <h5 class="card-title">Nombre del Proyecto</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
-        <ul class="list-group list-group-flush">
-        <li class="list-group-item">FECHA</li>        
-        </ul>
-        <div class="card-body">
-        <a href="#" class="card-link">Link</a>        
-        </div>
-    </div>    
-</div>
+<div class="proyectos">
+    <ul class="list-item">
+        <li *ngFor="let project of projectsList">
+            <div class="card" style="width: 24rem;">
+                <img [src]="project.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{{project.name}}</h5>
+                <p class="card-text">{{project.description}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{project.date}}</li>        
+                </ul>
+                <div class="card-body">
+                <a href="#" class="card-link">{{project.link}}</a>        
+                </div>
+            </div>  
+        </li>
+    </ul> 
+      
