@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import Swal from 'sweetalert2';
+
 // import { Portfolio } from '../../interfaces/portfolio'; APLICAR INTERFACE !!!!!!
 
 @Component({
@@ -11,7 +13,8 @@ export class ExperienceComponent implements OnInit {
 
   url:string="http://localhost:3000/experience";
   
-  experienceList:any;  
+  loggedIn:boolean = false;
+  experienceList:any;   
   nuevoId: number = 0;
 
   id: string = "";
@@ -45,11 +48,15 @@ export class ExperienceComponent implements OnInit {
     const body = {id: this.nuevoId, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     this.leerDatos();
+    this.leerDatos();
+    this.popUpAgregado();    
   }
 
   borrarItem(){         
     this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
-    this.leerDatos();    
+    this.leerDatos();
+    this.leerDatos();
+    this.popUpEliminado();    
   }
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -66,12 +73,55 @@ export class ExperienceComponent implements OnInit {
   guardarCambios(){
     const body = {id: this.id, name:this.name, image:this.image, period: this.period, position: this.position, tasks: this.tasks};     
     this.datosPortfolio.modificarDatos(this.url, body).subscribe();
-    this.leerDatos();    
+    this.leerDatos();
+    this.leerDatos();
+    this.poUpModificacion();        
   }
 
   //vuelve a Cargar los datos guardados en la BDD
   
   descartarCambios() {
     this.leerDatos();       
-  }  
+  }
+
+  // Mensajes de Alerta
+  
+  popUpEliminado() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 1500
+    })    
+    Toast.fire({
+      icon: 'warning',
+      title: 'Empleo eliminado'
+    })
+  }
+
+  poUpModificacion() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 1500
+    })    
+    Toast.fire({
+      icon: 'success',
+      title: 'Cambios guardados'
+    })
+  }
+
+  popUpAgregado() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 1500
+    })    
+    Toast.fire({
+      icon: 'success',
+      title: 'Empleo Agregado'
+    })
+  }
 }

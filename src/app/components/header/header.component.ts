@@ -8,6 +8,7 @@ import { PortfolioService } from '../../services/portfolio.service';
 })
 export class HeaderComponent implements OnInit {
 
+  // loggedIn:boolean = false;
   datosList:any;  
   url:string="http://localhost:3000/header/";
 

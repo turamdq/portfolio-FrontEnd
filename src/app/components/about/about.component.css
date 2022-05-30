@@ -14,11 +14,16 @@
     padding: 50px;
     margin-left: 30px;
     margin-right: 30px;
-    box-shadow: 0 4px 8px 0 rgba(13, 110, 253, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+    box-shadow: 0 4px 8px 0 rgba(13, 110, 253, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 90%;    
 }
 
 .texto-sobre-mi h2 {
     color: rgb(13, 1, 122);    
+}
+
+.texto-sobre-mi p {
+    margin-right: 30px;
 }
 
 .info-usuario {
@@ -29,18 +34,28 @@
     color: rgb(37, 39, 44);   
 }
 
-.lapiz {
+/* .lapiz {
     font-size: 18px;
     padding-left: 10px;
-}
+} */
 
-.lapiz:hover {
-    height: 40px;
+/* .lapiz:hover {
+    
     border: 1px solid rgb(0, 0, 0);
     border-radius: 50%;
+} */
+.btn-edicion {
+    width:50px; /* or whatever width you want. */
+    max-width:50px; /* or whatever width you want. */
+    /* display: inline-block; */
 }
 
 .btn-edicion:hover {
     border: 2px solid rgb(0, 0, 0);
     border-radius: 50%;
+    width: 100%;
+}
+
+.inTextSobreMi {
+    width: 100%;
 }

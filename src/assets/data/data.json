@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Andrés Turano",
       "position": "Full Stack Developer Jr.",
-      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta y"
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta y estamos haciendo una prueba yo y i gata que no para de llorar para poder salir a las 12 de la noche de un sabdo ya dminos1"
     }
   ],
   "header": [
@@ -25,27 +25,28 @@
     },
     {
       "id": 1653598152298,
-      "name": "banco frances1",
+      "name": "banco frances23",
       "image": "../assets/Img/jobs.png",
       "period": "2002 / 2005",
       "position": "ayudante",
       "tasks": "organizacion carpetas clientes"
+    },
+    {
+      "id": 1653876452882,
+      "name": "4444",
+      "image": "../assets/Img/jobs.png",
+      "period": "",
+      "position": "",
+      "tasks": ""
     }
   ],
   "education": [
     {
       "id": "1",
-      "name": "primaria1",
+      "name": "primaria12345",
       "title": "Título",
       "description": "hh",
       "image": "../assets/Img/educacion-logo.png"
-    },
-    {
-      "id": 1653621260239,
-      "name": "2",
-      "title": "2",
-      "description": "2",
-      "image": ""
     }
   ]
 }
