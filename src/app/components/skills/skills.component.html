@@ -1,159 +1,36 @@
 <div class="titulo-seccion border-bottom">
     <h1>Hard & Soft Skills</h1>
+</div>
 
 <div>    
     <div class="skills">
-        <div class="skill">
-            <circle-progress
-                [percent]="32"
-                [radius]="100"
-                [outerStrokeWidth]="19"
-                [innerStrokeWidth]="90"
-                [outerStrokeColor]="'#e44d26'"
-                [innerStrokeColor]="'black'"
-                [animation]="true"
-                [animationDuration]="900"
-                [showTitle]="false"
-                [showSubtitle]="false"
-                [showUnits]="false"
-                [showImage]="true"
-                [imageSrc]="'../assets/Img/logo-html5.png'"
-                [imageWidth]="70"
-                [imageHeight]="70"
-                [outerStrokeLinecap]="'none'"
-                [space]="2"
-                [renderOnClick]="true"
-                [responsive]="true"
-            >
-            </circle-progress>
-            <h4>HTML 5</h4>
-        </div>
-
-        <div class="skill">
-            <circle-progress
-                [percent]="25"
-                [radius]="100"
-                [outerStrokeWidth]="19"
-                [innerStrokeWidth]="90"
-                [outerStrokeColor]="'#0d73b7'"
-                [innerStrokeColor]="'black'"
-                [animation]="true"
-                [animationDuration]="900"
-                [showTitle]="false"
-                [showSubtitle]="false"
-                [showUnits]="false"
-                [showImage]="true"
-                [imageSrc]="'../assets/Img/logo-css3a.png'"
-                [imageWidth]="73"
-                [imageHeight]="73"
-                [outerStrokeLinecap]="'none'"
-                [space]="2"
-                [responsive]="true"
-            >
-            </circle-progress>
-            <h4>CSS 3</h4>
-        </div>
-
-        <div class="skill">
-            <circle-progress
-                [percent]="20"
-                [radius]="100"
-                [outerStrokeWidth]="19"
-                [innerStrokeWidth]="90"
-                [outerStrokeColor]="'#f7df1e'"
-                [innerStrokeColor]="'black'"
-                [animation]="true"
-                [animationDuration]="900"
-                [showTitle]="false"
-                [showSubtitle]="false"
-                [showUnits]="false"
-                [showImage]="true"
-                [imageSrc]="'../assets/Img/logo-js.png'"
-                [imageWidth]="73"
-                [imageHeight]="73"
-                [outerStrokeLinecap]="'none'"
-                [space]="2"
-                [responsive]="true"
-            >
-            </circle-progress>
-            <h4>JavaScript</h4>
-        </div>
-
-        <div class="skill">
-            <circle-progress
-                [percent]="36"
-                [radius]="100"
-                [outerStrokeWidth]="19"
-                [innerStrokeWidth]="90"
-                [outerStrokeColor]="'#7409f6'"
-                [innerStrokeColor]="'black'"
-                [animation]="true"
-                [animationDuration]="900"
-                [showTitle]="false"
-                [showSubtitle]="false"
-                [showUnits]="false"
-                [showImage]="true"
-                [imageSrc]="'../assets/Img/logo-bootstrap.png'"
-                [imageWidth]="73"
-                [imageHeight]="73"
-                [outerStrokeLinecap]="'none'"
-                [space]="2"
-                [responsive]="true"
-            >
-            </circle-progress>
-            <h4>Bootstrap</h4>
-        </div>
-
-        
-
-        <div class="skill">
-            <circle-progress
-                [percent]="30"
-                [radius]="100"
-                [outerStrokeWidth]="19"
-                [innerStrokeWidth]="90"
-                [outerStrokeColor]="'#e23237'"
-                [innerStrokeColor]="'black'"
-                [animation]="true"
-                [animationDuration]="900"
-                [showTitle]="false"
-                [showSubtitle]="false"
-                [showUnits]="false"
-                [showImage]="true"
-                [imageSrc]="'../assets/Img/logo-angular.png'"
-                [imageWidth]="65"
-                [imageHeight]="75"
-                [outerStrokeLinecap]="'none'"
-                [space]="2"
-                [responsive]="true"
-            >
-            </circle-progress>
-            <h4>Angular</h4>
-        </div>
-
-        <div class="skill">
-            <circle-progress
-                [percent]="20"
-                [radius]="100"
-                [outerStrokeWidth]="19"
-                [innerStrokeWidth]="90"
-                [outerStrokeColor]="'#007acc'"
-                [innerStrokeColor]="'black'"
-                [animation]="true"
-                [animationDuration]="900"
-                [showTitle]="false"
-                [showSubtitle]="false"
-                [showUnits]="false"
-                [showImage]="true"
-                [imageSrc]="'../assets/Img/logo-ts.png'"
-                [imageWidth]="65"
-                [imageHeight]="75"
-                [outerStrokeLinecap]="'none'"
-                [space]="2"
-                [responsive]="true"
-            >
-            </circle-progress>
-            <h4>TypeScript</h4>
-        </div>
-    </div> 
-</div>
+        <ul class="list-item">
+            <li *ngFor="let skill of skillsList">
+                <div class="skill">
+                    <circle-progress
+                        [percent]="skill.percent"
+                        [radius]="100"
+                        [outerStrokeWidth]="19"
+                        [innerStrokeWidth]="90"
+                        [outerStrokeColor]="skill.outerStrokeColor"
+                        [innerStrokeColor]="'black'"
+                        [animation]="true"
+                        [animationDuration]="900"
+                        [showTitle]="false"
+                        [showSubtitle]="false"
+                        [showUnits]="false"
+                        [showImage]="true"
+                        [imageSrc]="skill.imageSrc"
+                        [imageWidth]="70"
+                        [imageHeight]="70"
+                        [outerStrokeLinecap]="'none'"
+                        [space]="2"
+                        [renderOnClick]="true"
+                        [responsive]="true"
+                    >
+                    </circle-progress>
+                    <h4>{{skill.name}}</h4>
+                </div>
+            </li>
+        </ul>
+    </div>

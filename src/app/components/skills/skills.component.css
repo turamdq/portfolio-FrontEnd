@@ -5,13 +5,26 @@
 }
 
 .skills {
-    display: flex;    
-    justify-content: center;
-    flex-wrap: wrap;
+    /* display: flex;     */
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
     margin: 40px;
     margin-bottom: 130px;   
 }
 
 .skill {
     padding: 70px;
+}
+
+.skill,h4 {
+    text-align: center;
+    font-size: 1.4em;
+}
+
+.list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding-left: 0px;
 }
