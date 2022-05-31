@@ -86,24 +86,9 @@
     {
       "id": "1",
       "name": "HTML 5",
-      "percent": "36",
-      "radius": "100",
-      "outerStrokeWidth": "19",
-      "innerStrokeWidth": "90",
+      "percent": "55",
       "outerStrokeColor": "#e44d26",
-      "innerStrokeColor": "'black'",
-      "animation": "true",
-      "animationDuration": "900",
-      "showTitle": "false",
-      "showSubtitle": "false",
-      "showUnits": "false",
-      "showImage": "true",
-      "imageSrc": "../assets/Img/logo-html5.png",
-      "imageWidth": "73",
-      "imageHeight": "73",
-      "outerStrokeLinecap": "'none'",
-      "space": "2",
-      "responsive": "true"
+      "imageSrc": "../assets/Img/logo-html5.png"
     },
     {
       "id": "2",
@@ -130,24 +115,9 @@
     {
       "id": "3",
       "name": "JavaScript",
-      "percent": "36",
-      "radius": "100",
-      "outerStrokeWidth": "19",
-      "innerStrokeWidth": "90",
+      "percent": "25",
       "outerStrokeColor": "#f7df1e",
-      "innerStrokeColor": "'black'",
-      "animation": "true",
-      "animationDuration": "900",
-      "showTitle": "false",
-      "showSubtitle": "false",
-      "showUnits": "false",
-      "showImage": "true",
-      "imageSrc": "../assets/Img/logo-js.png",
-      "imageWidth": "73",
-      "imageHeight": "73",
-      "outerStrokeLinecap": "'none'",
-      "space": "2",
-      "responsive": "true"
+      "imageSrc": "../assets/Img/logo-js.png"
     },
     {
       "id": "4",
@@ -193,7 +163,7 @@
       "space": "2",
       "responsive": "true"
     },
-    {      
+    {
       "id": "6",
       "name": "TypeScript",
       "percent": "36",
@@ -214,6 +184,13 @@
       "outerStrokeLinecap": "'none'",
       "space": "2",
       "responsive": "true"
-     }
+    },
+    {
+      "id": 1653962638371,
+      "name": "Ingles técnico",
+      "percent": "60",
+      "outerStrokeColor": "#48f000",
+      "imageSrc": "../assets/Img/logo-dictionary.png"
+    }
   ]
 }

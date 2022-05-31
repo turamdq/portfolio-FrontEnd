@@ -1,19 +1,21 @@
 .titulo-seccion {
     text-align: center;
-    margin-top: 160px;
-    margin-bottom: 50px;
+    margin-top: 120px;
+    margin-bottom: 50px;    
 }
 
-.skills {
-    /* display: flex;     */
-    /* justify-content: center; */
-    /* flex-wrap: wrap; */
+.btn-agregar {
+    text-align: center;
+}
+
+.skills {    
     margin: 40px;
     margin-bottom: 130px;   
 }
 
 .skill {
-    padding: 70px;
+    padding: 10px;
+    margin: 40px;
 }
 
 .skill,h4 {
@@ -27,4 +29,9 @@
     justify-content: center;
     list-style-type: none;
     padding-left: 0px;
+}
+
+.botones {
+    text-align: center;
+    margin-bottom: 10px;
 }

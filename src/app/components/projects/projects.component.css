@@ -1,16 +1,15 @@
 .proyectos {    
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .titulo-seccion {
-    text-align: center;
-    margin-bottom: 100px;
-    margin-top: 100px;
+    text-align: center;    
+    margin-bottom: 60px;
+    margin-top: 5px;    
 }
 
 .btn-agregar {
-    text-align: center;
-    margin-top: 10px;
+    text-align: center;    
 }
 
 .botones {

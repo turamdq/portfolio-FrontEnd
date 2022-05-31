@@ -20,7 +20,7 @@ export class SkillsComponent implements OnInit {
   name: string="";
   percent: string = "";
   outerStrokeColor: string = "";
-  imageSrc: string = "";
+  imageSrc: string = "";  
   
   constructor(private datosPortfolio:PortfolioService) { }
 
@@ -41,7 +41,7 @@ export class SkillsComponent implements OnInit {
   }
 
   agregarItem() {    
-    this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
+    this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha        
     const body = {id: this.nuevoId, name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     this.leerDatos();
