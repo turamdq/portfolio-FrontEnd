@@ -17,43 +17,43 @@
   "experience": [
     {
       "id": "3",
-      "name": "Rafe Carnicerias",
-      "image": "../assets/Img/jobs.png",
+      "name": "CTM Informática",
+      "image": "../assets/Img/logo-Job2.png",
       "period": "10 años maso ",
-      "position": "carniceros en accion5555",
-      "tasks": "Soy el item 3 por ahora"
+      "position": "Técnico",
+      "tasks": "Soy el item 1 por ahora."
     },
     {
       "id": 1653598152298,
-      "name": "banco frances23",
-      "image": "../assets/Img/jobs.png",
-      "period": "2002 / 2005",
-      "position": "ayudante",
-      "tasks": "organizacion carpetas clientes"
+      "name": "BBVA Banco Frances",
+      "image": "../assets/Img/logo-Job2.png",
+      "period": "2002 - 2005",
+      "position": "Ayudante",
+      "tasks": "Organizacion legajos de clientes."
     },
     {
       "id": 1653876452882,
-      "name": "4444",
-      "image": "../assets/Img/jobs.png",
-      "period": "",
-      "position": "",
-      "tasks": ""
+      "name": "Empresa",
+      "image": "../assets/Img/logo-Job2.png",
+      "period": "xxxx - xxxx",
+      "position": "Posición",
+      "tasks": "Algunas tareas."
     }
   ],
   "education": [
     {
       "id": "1",
-      "name": "primaria",
+      "name": "Secundaria",
       "title": "Título",
-      "description": "hh",
+      "description": "Algo",
       "image": "../assets/Img/educacion-logo.png"
     },
     {
       "id": 1653945511321,
-      "name": "caasssssaaaa",
-      "title": "ssf",
-      "description": "asf",
-      "image": ""
+      "name": "Primaria",
+      "title": "Título",
+      "description": "Algo",
+      "image": "../assets/Img/educacion-logo.png"
     }
   ],
   "projects": [
@@ -78,7 +78,7 @@
       "name": "Lista de Tareas",
       "description": "Realizacion de una simple app, la cual guarda las tareas del día.",
       "date": "FECHA",
-      "image": "../../../assets/Img/proyecto2.jpg",
+      "image": "../../../assets/Img/proyecto3.jpg",
       "link": "https://"
     }
   ],
@@ -93,29 +93,14 @@
     {
       "id": "2",
       "name": "CCS 3",
-      "percent": "25",
-      "radius": "100",
-      "outerStrokeWidth": "19",
-      "innerStrokeWidth": "90",
+      "percent": "29",
       "outerStrokeColor": "#0d73b7",
-      "innerStrokeColor": "'black'",
-      "animation": "true",
-      "animationDuration": "900",
-      "showTitle": "false",
-      "showSubtitle": "false",
-      "showUnits": "false",
-      "showImage": "true",
-      "imageSrc": "../assets/Img/logo-css3a.png",
-      "imageWidth": "73",
-      "imageHeight": "73",
-      "outerStrokeLinecap": "'none'",
-      "space": "2",
-      "responsive": "true"
+      "imageSrc": "../assets/Img/logo-css3a.png"
     },
     {
       "id": "3",
       "name": "JavaScript",
-      "percent": "25",
+      "percent": "15",
       "outerStrokeColor": "#f7df1e",
       "imageSrc": "../assets/Img/logo-js.png"
     },
@@ -144,46 +129,16 @@
     {
       "id": "5",
       "name": "Angular",
-      "percent": "36",
-      "radius": "100",
-      "outerStrokeWidth": "19",
-      "innerStrokeWidth": "90",
+      "percent": "30",
       "outerStrokeColor": "#e23237",
-      "innerStrokeColor": "'black'",
-      "animation": "true",
-      "animationDuration": "900",
-      "showTitle": "false",
-      "showSubtitle": "false",
-      "showUnits": "false",
-      "showImage": "true",
-      "imageSrc": "../assets/Img/logo-angular.png",
-      "imageWidth": "73",
-      "imageHeight": "73",
-      "outerStrokeLinecap": "'none'",
-      "space": "2",
-      "responsive": "true"
+      "imageSrc": "../assets/Img/logo-angular.png"
     },
     {
       "id": "6",
       "name": "TypeScript",
-      "percent": "36",
-      "radius": "100",
-      "outerStrokeWidth": "19",
-      "innerStrokeWidth": "90",
+      "percent": "20",
       "outerStrokeColor": "#007acc",
-      "innerStrokeColor": "'black'",
-      "animation": "true",
-      "animationDuration": "900",
-      "showTitle": "false",
-      "showSubtitle": "false",
-      "showUnits": "false",
-      "showImage": "true",
-      "imageSrc": "../assets/Img/logo-ts.png",
-      "imageWidth": "73",
-      "imageHeight": "73",
-      "outerStrokeLinecap": "'none'",
-      "space": "2",
-      "responsive": "true"
+      "imageSrc": "../assets/Img/logo-ts.png"
     },
     {
       "id": 1653962638371,

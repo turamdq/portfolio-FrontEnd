@@ -1,7 +1,7 @@
 .educacion {
     display:column;
     border: 1px solid rgb(185, 184, 184);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin: 100px 35px;    
 }
@@ -22,16 +22,17 @@
    align-self: flex-start;    
    background-color: rgb(255, 255, 255);   
 }
-
 .btn-eliminar:hover {
+    color: rgb(177, 6, 6);
     border: 1px solid rgb(17, 90, 201);
     border-radius: 10%;
 }
 
 .btn-edicion:hover {
+    color: rgb(35, 156, 23);
     border: 1px solid rgb(17, 90, 201);
     border-radius: 10%;
-}   
+}
 
 .btn-eliminar {
    align-self: flex-start;
@@ -53,7 +54,7 @@
     display: flex;
     flex-wrap: column;
     align-items: center;
-    border: 1px solid;
+    border: 1px solid rgb(209, 211, 219);
     border-radius: 13px;
     padding: 40px;
     margin: 3%;

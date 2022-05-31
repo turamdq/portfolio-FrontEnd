@@ -18,11 +18,13 @@
 }
 
 .btn-eliminar:hover {
+    color: rgb(177, 6, 6);
     border: 1px solid rgb(17, 90, 201);
     border-radius: 10%;
 }
 
 .btn-edicion:hover {
+    color: rgb(35, 156, 23);
     border: 1px solid rgb(17, 90, 201);
     border-radius: 10%;
 }   

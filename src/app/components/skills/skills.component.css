@@ -6,6 +6,7 @@
 
 .btn-agregar {
     text-align: center;
+    margin-bottom: 80px;
 }
 
 .skills {    
@@ -15,7 +16,8 @@
 
 .skill {
     padding: 10px;
-    margin: 40px;
+    margin: 10px;
+    margin-bottom: 80px;
 }
 
 .skill,h4 {
@@ -31,7 +33,21 @@
     padding-left: 0px;
 }
 
-.botones {
-    text-align: center;
+.botones {    
+    text-align: center;    
     margin-bottom: 10px;
+}
+
+
+
+.btn-eliminar:hover {
+    color: rgb(177, 6, 6);
+    border: 1px solid rgb(17, 90, 201);
+    border-radius: 10%;
+}
+
+.btn-edicion:hover {
+    color: rgb(57, 172, 23);
+    border: 1px solid rgb(17, 90, 201);
+    border-radius: 10%;
 }

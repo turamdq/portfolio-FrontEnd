@@ -21,9 +21,9 @@
 
                     <circle-progress
                         [percent]="skill.percent"
-                        [radius]="100"
-                        [outerStrokeWidth]="19"
-                        [innerStrokeWidth]="90"
+                        [radius]="60"
+                        [outerStrokeWidth]="12"
+                        [innerStrokeWidth]="70"
                         [outerStrokeColor]="skill.outerStrokeColor"
                         [innerStrokeColor]="'black'"
                         [animation]="true"
@@ -33,12 +33,13 @@
                         [showUnits]="false"
                         [showImage]="true"
                         [imageSrc]="skill.imageSrc"
-                        [imageWidth]="70"
-                        [imageHeight]="70"
+                        [imageWidth]="40"
+                        [imageHeight]="40"
                         [outerStrokeLinecap]="'none'"
                         [space]="2"
                         [renderOnClick]="true"
-                        [responsive]="true"                        
+                        [responsive]="true"
+                        [lazy]="true"                       
                     >
                     </circle-progress>
                     <h4>{{skill.name}}</h4>
