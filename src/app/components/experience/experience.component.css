@@ -57,9 +57,7 @@
 .seccion-box img { /*logo de empresa-escuela*/
     width: 100px;
     height: auto;
-    margin: 0 auto; 
-    /* border-radius: 8px;
-    border: 1px solid rgb(207, 196, 196); */
+    margin: 0 auto;
 }
 
 .seccion-box p,h4,h5 { /*parrafos de descripcion*/

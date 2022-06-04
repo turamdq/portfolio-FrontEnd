@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Andrés Turano",
       "position": "Full Stack Developer Jr.",
-      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta y estamos haciendo una prueba yo y i gata que no para de llorar para poder salir a las 12 de la noche de un sabdo ya dminos"
+      "about": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit deserunt aliquam dignissimos at suscipit quas, incidun66 esta es uan prueba de guardado de esta y estamos haciendo una prueba yo y i gata que no para de llorar para poder salir a las 12 de la noche de un sabdo ya estoy cansado.s asasasas esta es una prueba de espaciado entre divs eba de guardado de esta y estamos haciendo una prueba yo y i gata que no para de llorar para poder salir a las 121"
     }
   ],
   "header": [
@@ -19,6 +19,8 @@
       "id": "3",
       "name": "CTM Informática",
       "image": "../assets/Img/logo-Job2.png",
+      "startDate": "2001",
+      "endDate": "2015",
       "period": "10 años maso ",
       "position": "Técnico",
       "tasks": "Soy el item 1 por ahora."
@@ -27,6 +29,8 @@
       "id": 1653598152298,
       "name": "BBVA Banco Frances",
       "image": "../assets/Img/logo-Job2.png",
+      "startDate": "2009",
+      "endDate": "2010",
       "period": "2002 - 2005",
       "position": "Ayudante",
       "tasks": "Organizacion legajos de clientes."
@@ -35,9 +39,21 @@
       "id": 1653876452882,
       "name": "Empresa",
       "image": "../assets/Img/logo-Job2.png",
+      "startDate": "2008",
+      "endDate": "2009",
       "period": "xxxx - xxxx",
       "position": "Posición",
       "tasks": "Algunas tareas."
+    },
+    {
+      "id": 1654295549829,
+      "name": "Rafe Carnicerias",
+      "image": "../assets/Img/logo-Job2.png",
+      "startDate": "2001",
+      "endDate": "2005",
+      "period": "",
+      "position": "Mantenimieto",
+      "tasks": "Mantenimiento General de instalaciones."
     }
   ],
   "education": [

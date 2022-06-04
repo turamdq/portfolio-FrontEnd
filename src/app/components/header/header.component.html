@@ -19,7 +19,8 @@
         <a href="#"><i class="fa-brands fa-linkedin icons"></i></a>
       </div>
       <div class="boton-acceso">
-        <button type="button" class="btn btn-warning">Acceder</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+        data-bs-target="#login">Acceder</button>
       </div>
     </div>
   </div>
@@ -49,7 +50,7 @@
         <div class="modal-body" style="text-align: left; margin-bottom: 50px;">
           <label for="basic-url" class="form-label"></label>
           <div class="input-group mb-3" style="margin-top: 40px">
-            <span class="input-group-text" id="basic-addon3">URL</span>
+            <span class="input-group-text" id="basic-addon3">URL de la imagen:</span>
             <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
               [(ngModel)]="dato.backImage">
           </div>
@@ -66,7 +67,7 @@
 
   <!-- Modal de Bootstrap imagen Usuario -->
 
-  <div class="modal fade " id="imagenUsuario" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal fade" id="imagenUsuario" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header">
@@ -77,7 +78,7 @@
         <div class="modal-body" style="text-align: left; margin-bottom: 50px;">
           <label for="basic-url" class="form-label"></label>
           <div class="input-group mb-3" style="margin-top: 40px">
-            <span class="input-group-text" id="basic-addon3">URL</span>
+            <span class="input-group-text" id="basic-addon3">URL de la imagen:</span>
             <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
               [(ngModel)]="dato.image">
           </div>
@@ -87,6 +88,34 @@
             (click)="descartarCambios()">Cancelar</button>
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
             (click)="guardarCambios(dato)">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal Bootstrap sign in mover a componente login? -->
+
+  <div class="modal fade modal-signin py-5" tabindex="-1" role="dialog" id="login">
+    <div class="modal-dialog bg-dark" role="document">
+      <div class="modal-content rounded-4 shadow">
+        <div class="modal-header p-5 pb-4 border-bottom-0">
+          <!-- <h5 class="modal-title">Modal title</h5> -->
+          <h3 class="fw-bold mb-0">Acceder para edición</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-5 pt-0">
+          <form class="">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="Usuario">
+              <label for="floatingInput">Usuario</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Contraseña">
+              <label for="floatingPassword">Contraseña</label>
+            </div>
+            <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Acceder</button>
+          </form>
         </div>
       </div>
     </div>

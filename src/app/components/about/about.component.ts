@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-about',
@@ -28,11 +29,25 @@ export class AboutComponent implements OnInit {
   
   guardarCambios(dato:any){
     console.log(dato);     
-    this.datosPortfolio.modificarDatos(this.url, dato).subscribe();    
+    this.datosPortfolio.modificarDatos(this.url, dato).subscribe();
+    this.poUpModificacion()    
   }
 
   //vuelve a Cargar los datos guardados en la BDD
   descartarCambios() {
     this.leerDatos();    
+  }
+
+  poUpModificacion() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'center',
+      showConfirmButton: false,
+      timer: 1500
+    })    
+    Toast.fire({
+      icon: 'success',
+      title: 'Cambios guardados'
+    })
   }
 }

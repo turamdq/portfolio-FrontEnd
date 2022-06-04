@@ -12,7 +12,7 @@
   </div>
 
   <div class="texto-sobre-mi">
-    <div>
+    <div class="datos-sobre-mi">
       <h2>Sobre mí</h2>
       <p>{{dato.about}}</p>
     </div>
@@ -61,8 +61,11 @@
             (click)="descartarCambios()">
           </button>
         </div>
-        <div class="modal-body" style="text-align: center">
-          <textarea cols="120" rows="10" style="max-width:100%;" [(ngModel)]="dato.about"></textarea>
+        <div class="modal-body" style="text-align: center">          
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label"></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" [(ngModel)]="dato.about"></textarea>
+          </div>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"

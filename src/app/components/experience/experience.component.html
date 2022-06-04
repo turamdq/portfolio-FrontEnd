@@ -2,7 +2,8 @@
   <div>
     <h2 class="titulos-secciones">Experiencia</h2>
     <div class="btn-agregar">
-      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#agregar">Añadir</button>      
+      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+        data-bs-target="#agregar">Añadir</button>
     </div>
   </div>
 
@@ -13,7 +14,7 @@
           <img [src]="experience.image" alt="">
         </div>
         <div class="inbox">
-          <h4>{{experience.name}} / {{experience.period}}</h4>
+          <h4>{{experience.name}} / {{experience.startDate}} - {{experience.endDate}}</h4>
           <h5>{{experience.position}}</h5>
           <p>{{experience.tasks}}</p>
         </div>
@@ -48,17 +49,35 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modificar sección Experiencia</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Modificar Experiencia</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                 (click)="descartarCambios()"></button>
             </div>
             <div class="modal-body">
-              <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
+              <label for="nombre" style="margin-bottom: 10px"><b>Empresa:</b></label>
               <input id="nombre" class="form-control" type="text" placeholder="Nombre de la Empresa"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
-              <label for="perido" style="margin-bottom: 10px"><b>Periodo de trabajo:</b></label>
-              <input class="form-control" type="text" placeholder="Perido de trabajo" aria-label="default input example"
-                style="margin-bottom: 30px" [(ngModel)]="period">
+
+
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                    <label for="periodo" style="margin-bottom: 10px"></label>
+                    <input class="form-control" type="text" id="floatingInputGrid" aria-label="default input example"
+                      style="margin-bottom: 30px" [(ngModel)]="startDate">
+                    <label for="floatingInputGrid">Comienzo</label>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                    <label for="periodo" style="margin-bottom: 10px"></label>
+                    <input class="form-control" type="text" id="floatingInputGrid" aria-label="default input example"
+                      style="margin-bottom: 30px" [(ngModel)]="endDate">
+                    <label for="floatingSelectGrid">Fin</label>
+                  </div>
+                </div>
+              </div>
+
               <label for="posicion" style="margin-bottom: 10px"><b>Posicion:</b></label>
               <input class="form-control" type="text" placeholder="Posicion/cargo" aria-label="default input example"
                 style="margin-bottom: 30px" [(ngModel)]="position">
@@ -88,17 +107,34 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Modificar sección Experiencia</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Añadir Experiencia</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                 (click)="descartarCambios()"></button>
             </div>
             <div class="modal-body">
-              <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
+              <label for="nombre" style="margin-bottom: 10px"><b>Empresa:</b></label>
               <input id="nombre" class="form-control" type="text" placeholder="Nombre de la Empresa"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
-              <label for="perido" style="margin-bottom: 10px"><b>Periodo de trabajo:</b></label>
-              <input class="form-control" type="text" placeholder="Perido de trabajo" aria-label="default input example"
-                style="margin-bottom: 30px" [(ngModel)]="period">
+
+              <div class="row g-2">
+                <div class="col-md">
+                  <div class="form-floating">
+                    <label for="periodo" style="margin-bottom: 10px"></label>
+                    <input class="form-control" type="text" id="floatingInputGrid" aria-label="default input example"
+                      style="margin-bottom: 30px" [(ngModel)]="startDate">
+                    <label for="floatingInputGrid">Comienzo</label>
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-floating">
+                    <label for="periodo" style="margin-bottom: 10px"></label>
+                    <input class="form-control" type="text" id="floatingInputGrid" aria-label="default input example"
+                      style="margin-bottom: 30px" [(ngModel)]="endDate">
+                    <label for="floatingSelectGrid">Fin</label>
+                  </div>
+                </div>
+              </div>
+
               <label for="posicion" style="margin-bottom: 10px"><b>Posicion:</b></label>
               <input class="form-control" type="text" placeholder="Posicion/cargo" aria-label="default input example"
                 style="margin-bottom: 30px" [(ngModel)]="position">

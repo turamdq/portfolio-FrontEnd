@@ -7,15 +7,14 @@
 }
 
 .texto-sobre-mi {
-    display: flex;
-    text-align: justify;
+    display: flex;    
     border-radius: 30px;    
     background-color: rgb(243, 243, 243);
     padding: 50px;
     margin-left: 30px;
     margin-right: 30px;
     box-shadow: 0 4px 8px 0 rgba(13, 110, 253, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    width: 90%;    
+    width: 80%;    
 }
 
 .texto-sobre-mi h2 {
@@ -23,8 +22,19 @@
 }
 
 .texto-sobre-mi p {
-    margin-right: 30px;
+    font-size: 1.1rem;  
+    text-align: justify;
+    margin-top: 25px;
+    margin-right: 10px;    
 }
+
+/* .datos-sobre-mi {
+    width: 80%;
+} */
+
+/* .lapiz {
+    width: 20%;
+} */
 
 .info-usuario {
     font-size: 35px;
@@ -34,17 +44,17 @@
     color: rgb(37, 39, 44);   
 }
 
-.btn-edicion {
+/* .btn-edicion {
     width:50px;
     max-width:50px;
-}
+} */
 
 .btn-edicion:hover {
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 50%;
-    width: 100%;
+    border: 1px solid rgb(0, 0, 0);
+    /* border-radius: 50%; */
+    /* width: 100%; */
 }
 
-.inTextSobreMi {
-    width: 100%;
-}
+/* .inTextSobreMi {
+    width: 90%;
+} */
