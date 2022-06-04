@@ -27,16 +27,16 @@
   <div class="modal fade " id="infoUsuario" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="infoUsuarioLabel">Modificar "Nombre / Título"</h5>
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title text-white" id="infoUsuarioLabel">Modificar "Nombre / Título"</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
             (click)="descartarCambios()"></button>
         </div>
         <div class="modal-body" style="text-align: left; margin-bottom: 50px;">
-          <label for="nombre"><b>Nombre</b></label>
+          <label for="nombre" style="margin-top: 30px; margin-bottom: 20px"><b>Nombre:</b></label>
           <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"
             style="margin-bottom: 20px" [(ngModel)]="dato.name">
-          <label for="nombre"><b>Título</b></label>
+          <label for="nombre" style="margin-bottom: 20px"><b>Título:</b></label>
           <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"
             [(ngModel)]="dato.position">
         </div>
@@ -55,8 +55,8 @@
   <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modificar sección "Sobre mí"</h5>
+        <div class="modal-header bg-primary">
+          <h5 class="modal-title text-white" id="exampleModalLabel">Modificar sección "Sobre mí"</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
             (click)="descartarCambios()">
           </button>
@@ -64,7 +64,7 @@
         <div class="modal-body" style="text-align: center">          
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label"></label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" [(ngModel)]="dato.about"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" style="text-align: justify" [(ngModel)]="dato.about"></textarea>
           </div>
         </div>
         <div class="modal-footer">
