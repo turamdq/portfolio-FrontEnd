@@ -10,7 +10,8 @@ import Swal from 'sweetalert2';
 })
 export class ExperienceComponent implements OnInit {
 
-  url:string="http://localhost:3000/experience";
+  //cambie http://localhost:8080/experience
+  url:string="http://localhost:8080/ver/experiencias";
   
   // loggedIn:boolean = false;
   experienceList:any;   
@@ -21,7 +22,7 @@ export class ExperienceComponent implements OnInit {
   image: string = "";
   startDate: string = "";
   endDate: string = "";
-  period: string = "";
+  //period: string = "";
   position: string = "";
   tasks: string = "";  
 
@@ -41,14 +42,15 @@ export class ExperienceComponent implements OnInit {
     this.image = "";
     this.startDate = "";
     this.endDate = "";
-    this.period = "";
+    //this.period = "";
     this.position = "";
     this.tasks = "";
   }
 
+  //quite period: this.period
   agregarItem() {    
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
-    const body = {id: this.nuevoId, name:this.name, image:this.image, startDate: this.startDate, endDate: this.endDate, period: this.period, position: this.position, tasks: this.tasks};
+    const body = {id: this.nuevoId, name:this.name, image:this.image, startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     this.leerDatos();
     this.leerDatos();
@@ -70,13 +72,15 @@ export class ExperienceComponent implements OnInit {
     this.image = `${experience.image}`;
     this.startDate = `${experience.startDate}`;
     this.endDate = `${experience.endDate}`;
-    this.period = `${experience.period}`;
+    //this.period = `${experience.period}`;
     this.position = `${experience.position}`;
     this.tasks = `${experience.tasks}`;
   }
 
+
+  //quite period: this.period
   guardarCambios(){
-    const body = {id: this.id, name:this.name, image:this.image,startDate: this.startDate, endDate: this.endDate, period: this.period, position: this.position, tasks: this.tasks};     
+    const body = {id: this.id, name:this.name, image:this.image,startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};     
     this.datosPortfolio.modificarDatos(this.url, body).subscribe();
     this.leerDatos();
     this.leerDatos();

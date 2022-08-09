@@ -63,13 +63,6 @@
       "title": "Título",
       "description": "Algo",
       "image": "../assets/Img/educacion-logo.png"
-    },
-    {
-      "id": 1653945511321,
-      "name": "Primaria",
-      "title": "Título",
-      "description": "Algo",
-      "image": "../assets/Img/educacion-logo.png"
     }
   ],
   "projects": [
