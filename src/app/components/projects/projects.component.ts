@@ -10,16 +10,16 @@ import Swal from 'sweetalert2';
 })
 export class ProjectsComponent implements OnInit {
 
-  url:string="http://localhost:3000/projects";
+  url:string="http://localhost:8080/proyecto";
   
   // loggedIn:boolean = false;
   projectsList:any;   
-  nuevoId: number = 0;
+  //nuevoId: number = 0;
 
   id: string = "";
   name: string="";  
   description: string = "";
-  date: string = "";
+  dates: string = "";
   image: string = "";  
   link: string = "";
 
@@ -37,14 +37,14 @@ export class ProjectsComponent implements OnInit {
     this.id = "";
     this.name ="";
     this.description = "";
-    this.date = "";
+    this.dates = "";
     this.image = "";
     this.link = "";
   }
 
   agregarItem() {    
-    this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
-    const body = {id: this.nuevoId, name:this.name, description: this.description, date: this.date, image: this.image, link: this.link};
+    //this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha id: this.nuevoId,    
+    const body = {name:this.name, description: this.description, dates: this.dates, image: this.image, link: this.link};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     this.leerDatos();
     this.leerDatos();
@@ -60,17 +60,17 @@ export class ProjectsComponent implements OnInit {
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
 
-  itemAModificar(experience:any){
-    this.id = `${experience.id}`;
-    this.name = `${experience.name}`;
-    this.description = `${experience.description}`;
-    this.date = `${experience.date}`;
-    this.image = `${experience.image}`;
-    this.link = `${experience.link}`;
+  itemAModificar(project:any){
+    this.id = `${project.id}`;
+    this.name = `${project.name}`;
+    this.description = `${project.description}`;
+    this.dates = `${project.dates}`;
+    this.image = `${project.image}`;
+    this.link = `${project.link}`;
   }
 
   guardarCambios(){
-    const body = {id: this.id, name:this.name, description:this.description, date:this.date, image:this.image, link:this.link};     
+    const body = {id: this.id, name:this.name, description:this.description, dates:this.dates, image:this.image, link:this.link};     
     this.datosPortfolio.modificarDatos(this.url, body).subscribe();
     this.leerDatos();
     this.leerDatos();
