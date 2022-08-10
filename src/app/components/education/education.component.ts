@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 export class EducationComponent implements OnInit {
 
   
-  url:string="http://localhost:3000/education";
+  url:string="http://localhost:8080/educacion";
   
   educationList: any;
   nuevoId: number = 0;

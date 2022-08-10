@@ -10,7 +10,7 @@ import Swal from 'sweetalert2';
 export class AboutComponent implements OnInit {
 
   datosList:any;
-  url:string="http://localhost:3000/about/";
+  url:string="http://localhost:8080/persona";
 
 
   constructor(private datosPortfolio:PortfolioService) { }

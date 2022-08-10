@@ -13,17 +13,20 @@ export class PortfolioService {
   // Leer a traves del metodo HTTP GET
   
   obtenerDatos(url: string): Observable<any> {
-    return this.http.get(url);    
+    //return this.http.get(url);
+    return this.http.get(`${url}/ver`);    
   }
 
-  modificarDatos(url: string, body: any): Observable<any> {    
-    return this.http.put<void>(`${url}/${body.id}`, body);        
+  modificarDatos(url: string, body: any): Observable<any> {       
+    return this.http.put<void>(`${url}/editar/${body.id}`, body);        
   }
 
   borrarDatos(url: string, id: string): Observable<any> {
-    return this.http.delete<void>(`${url}/${id}`);
+    console.log("el id a borrar es: " + id);
+    return this.http.delete<void>(`${url}/borrar/${id}`);
+    
   }
   agregarNuevo(url: string, body: any): Observable<any>{
-    return this.http.post<void>(`${url}`, body)
+    return this.http.post<void>(`${url}/nueva`, body)
   }
 }
