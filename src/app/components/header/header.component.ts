@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import { Router } from '@angular/router';
+import { TokenService } from '../../services/token.service';
 
 @Component({
   selector: 'app-header',
@@ -8,14 +10,22 @@ import { PortfolioService } from '../../services/portfolio.service';
 })
 export class HeaderComponent implements OnInit {
 
-  // loggedIn:boolean = false;
+  isLogged = false;
+
   datosList:any;  
   url:string="http://localhost:8080/header";
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private router:Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    
     this.leerDatos();
+
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+    }else{
+      this.isLogged = false;
+    }
   }
 
   //Funcion para obtener datos mediante el servicio
@@ -36,4 +46,14 @@ export class HeaderComponent implements OnInit {
   descartarCambios() {
     return this.leerDatos();    
   }
+
+  login(){
+    this.router.navigate(['/login']);
+  }
+
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+
 }

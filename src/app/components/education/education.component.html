@@ -2,7 +2,7 @@
   <div>
     <h2 class="titulos-secciones">Educación</h2>
     <div class="btn-agregar">
-      <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal"
+      <button *ngIf="isLogged" type="button" class="btn btn-success btn-lg" data-bs-toggle="modal"
         data-bs-target="#agregarEducation">Añadir</button>
     </div>
   </div>
@@ -21,9 +21,9 @@
           <p>{{education.description}}</p>
         </div>
         <div class="botones">
-          <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicionEducation"
+          <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicionEducation"
             (click)="itemAModificar(education)"><i class="fa-solid fa-pencil"></i></button>
-          <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarEducation"
+          <button *ngIf="isLogged" class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarEducation"
             (click)="itemAModificar(education)"><i class="fa-solid fa-trash"></i></button>
         </div>
       </div>

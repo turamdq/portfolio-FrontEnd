@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 import Swal from 'sweetalert2';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-about',
@@ -9,14 +10,20 @@ import Swal from 'sweetalert2';
 })
 export class AboutComponent implements OnInit {
 
+  isLogged = false;
   datosList:any;
   url:string="http://localhost:8080/persona";
 
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private tokenService:TokenService) { }
 
   ngOnInit(): void {
-    this.leerDatos();    
+    this.leerDatos();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }        
   }
 
   //Funcion para obtener datos mediante el servicio

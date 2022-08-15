@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 import Swal from 'sweetalert2';
+import { TokenService } from 'src/app/services/token.service';
 // import { Portfolio } from '../../interfaces/portfolio'; APLICAR INTERFACE !!!!!!
 
 @Component({
@@ -11,8 +12,8 @@ import Swal from 'sweetalert2';
 export class SkillsComponent implements OnInit {
 
   url:string="http://localhost:8080/skill";
+  isLogged = false;
   
-  // loggedIn:boolean = false;
   skillsList: any;   
   //nuevoId: number = 0;
 
@@ -22,10 +23,15 @@ export class SkillsComponent implements OnInit {
   outerStrokeColor: string = "";
   imageSrc: string = "";  
   
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private tokenService:TokenService) { }
 
   ngOnInit(): void {
     this.leerDatos();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }      
   }
 
   //Funcion para obtener datos mediante el servicio
@@ -45,16 +51,18 @@ export class SkillsComponent implements OnInit {
     //saco la parte id del body dado q lo genera automaticamente el back id: this.nuevoId, 
     const body = {name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
+    
+    this.popUpAgregado();
     this.leerDatos();
-    this.leerDatos();
-    this.popUpAgregado();    
+    this.leerDatos();    
   }
 
   borrarItem(){         
     this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
+    
+    this.popUpEliminado();
     this.leerDatos();
-    this.leerDatos();
-    this.popUpEliminado();    
+    this.leerDatos();    
   }
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -70,9 +78,10 @@ export class SkillsComponent implements OnInit {
   guardarCambios(){
     const body = {id: this.id, name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};     
     this.datosPortfolio.modificarDatos(this.url, body).subscribe();
+    
+    this.poUpModificacion();
     this.leerDatos();
-    this.leerDatos();
-    this.poUpModificacion();        
+    this.leerDatos();        
   }
 
   //vuelve a Cargar los datos guardados en la BDD
