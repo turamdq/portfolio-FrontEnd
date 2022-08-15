@@ -3,7 +3,7 @@
 </div>
 
 <div class="btn-agregar">
-  <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+  <button *ngIf="isLogged" type="button" class="btn btn-dark" data-bs-toggle="modal"
     data-bs-target="#agregarProyecto">Añadir</button>
 </div>
 
@@ -11,9 +11,9 @@
   <ul class="list-item">
     <li class="li1" *ngFor="let project of projectsList">
       <div class="botones">
-        <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#editarProyecto"
+        <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#editarProyecto"
           (click)="itemAModificar(project)"><i class="fa-solid fa-pencil"></i></button>
-        <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarProyecto"
+        <button *ngIf="isLogged" class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarProyecto"
           (click)="itemAModificar(project)"><i class="fa-solid fa-trash"></i></button>
       </div>
       <div class="card" style="width: 20rem;">

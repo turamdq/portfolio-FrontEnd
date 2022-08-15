@@ -2,7 +2,7 @@
   <div>
     <h2 class="titulos-secciones">Experiencia</h2>
     <div class="btn-agregar">
-      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+      <button *ngIf="isLogged" type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
         data-bs-target="#agregar">Añadir</button>
     </div>
   </div>
@@ -19,9 +19,9 @@
           <p>{{experience.tasks}}</p>
         </div>
         <div class="botones">
-          <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicion"
+          <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicion"
             (click)="itemAModificar(experience)"><i class="fa-solid fa-pencil"></i></button>
-          <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminar"
+          <button *ngIf="isLogged" class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminar"
             (click)="itemAModificar(experience)"><i class="fa-solid fa-trash"></i></button>
         </div>
       </div>

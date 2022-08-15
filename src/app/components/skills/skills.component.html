@@ -3,7 +3,7 @@
 </div>
 
 <div class="btn-agregar">
-  <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+  <button *ngIf="isLogged" type="button" class="btn btn-warning" data-bs-toggle="modal"
     data-bs-target="#agregarSkill">Añadir</button>
 </div>
 
@@ -14,9 +14,9 @@
 
       <div class="skill">
         <div class="botones">
-          <button class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#editarSkill"
+          <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#editarSkill"
             (click)="itemAModificar(skill)"><i class="fa-solid fa-pencil"></i></button>
-          <button class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarSkill"
+          <button *ngIf="isLogged" class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarSkill"
             (click)="itemAModificar(skill)"><i class="fa-solid fa-trash"></i></button>
         </div>
 

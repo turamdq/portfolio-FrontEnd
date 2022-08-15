@@ -19,20 +19,22 @@
         <a href="#"><i class="fa-brands fa-linkedin icons"></i></a>
       </div>
       <div class="boton-acceso">
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-        data-bs-target="#login">Acceder</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="login()" *ngIf="!isLogged"
+        >Login</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="onLogOut()" *ngIf="isLogged"
+        >Logout</button>
       </div>
     </div>
-  </div>
+  </div> <!--data-bs-target="#login"-->
 
   <!--imagen de portada + imagen de usuario superpuesta-->
 
   <div class="container-portada">
     <img class="img-fluid imagenPortada" src={{dato.backImage}} alt="">
-    <button class="btn btn-portada"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
+    <button *ngIf="isLogged" class="btn btn-portada"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
         data-bs-target="#imagenPortada"></i></button>
     <img class="img-fluid imagenUsuario" src={{dato.image}}>
-    <button class="btn btn-usuario"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
+    <button *ngIf="isLogged" class="btn btn-usuario"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
         data-bs-target="#imagenUsuario"></i></button>
   </div>
 

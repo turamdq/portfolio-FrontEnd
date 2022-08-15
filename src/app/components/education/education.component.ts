@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 import Swal from 'sweetalert2';
-// import { Portfolio } from '../../interfaces/portfolio'; APLICAR INTERFACE !!!!!!
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-education',
@@ -13,6 +13,7 @@ export class EducationComponent implements OnInit {
   
   url:string="http://localhost:8080/educacion";
   
+  isLogged = false;
   educationList: any;
   nuevoId: number = 0;
 
@@ -23,10 +24,15 @@ export class EducationComponent implements OnInit {
   image: string = ""; 
   
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private tokenService:TokenService) { }
 
   ngOnInit(): void {
-    this.leerDatos();    
+    this.leerDatos();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }         
   }
 
   //Funcion para obtener datos mediante el servicio
@@ -49,16 +55,18 @@ export class EducationComponent implements OnInit {
       this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
       const body = {id: this.nuevoId, name: this.name, title: this.title, description: this.description, image: this.image};
       this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
-      this.leerDatos();
-      this.leerDatos();
+      
       this.popUpAgregado();
+      this.leerDatos();
+      this.leerDatos();
     }
   
     borrarItem(){         
       this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
+      
+      this.popUpEliminado();
       this.leerDatos();
-      this.leerDatos();
-      this.popUpEliminado();    
+      this.leerDatos();    
     }
   
     //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -74,9 +82,10 @@ export class EducationComponent implements OnInit {
     guardarCambios(){
       const body = {id: this.id, name: this.name, title: this.title, description: this.description, image: this.image};      
       this.datosPortfolio.modificarDatos(this.url, body).subscribe();
-      this.leerDatos();
-      this.leerDatos();
+      
       this.poUpModificacion();
+      this.leerDatos();
+      this.leerDatos();
     }
   
     //vuelve a Cargar los datos guardados en la BDD

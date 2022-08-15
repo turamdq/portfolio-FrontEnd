@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
+import { TokenService } from '../../services/token.service';
 import Swal from 'sweetalert2';
 // import { Portfolio } from '../../interfaces/portfolio'; APLICAR INTERFACE !!!!!!
 
@@ -13,7 +14,7 @@ export class ExperienceComponent implements OnInit {
   //cambie http://localhost:8080/experience
   url:string="http://localhost:8080/experiencia";
   
-  // loggedIn:boolean = false;
+  isLogged = false;
   experienceList:any;   
   nuevoId: number = 0;
 
@@ -26,10 +27,15 @@ export class ExperienceComponent implements OnInit {
   position: string = "";
   tasks: string = "";  
 
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private datosPortfolio:PortfolioService, private tokenService:TokenService) { }
 
   ngOnInit(): void {
-    this.leerDatos();        
+    this.leerDatos();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }        
   }
 
   //Funcion para obtener datos mediante el servicio
@@ -52,16 +58,18 @@ export class ExperienceComponent implements OnInit {
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
     const body = {id: this.nuevoId, name:this.name, image:this.image, startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
+    
+    this.popUpAgregado();
     this.leerDatos();
-    this.leerDatos();
-    this.popUpAgregado();    
+    this.leerDatos();    
   }
 
   borrarItem(){         
     this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
+    
+    this.popUpEliminado();
     this.leerDatos();
-    this.leerDatos();
-    this.popUpEliminado();    
+    this.leerDatos();    
   }
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -82,9 +90,10 @@ export class ExperienceComponent implements OnInit {
   guardarCambios(){
     const body = {id: this.id, name:this.name, image:this.image,startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};     
     this.datosPortfolio.modificarDatos(this.url, body).subscribe();
+    
+    this.poUpModificacion();
     this.leerDatos();
-    this.leerDatos();
-    this.poUpModificacion();        
+    this.leerDatos();        
   }
 
   //vuelve a Cargar los datos guardados en la BDD
