@@ -53,16 +53,16 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     
     this.popUpAgregado();
-    this.leerDatos();
-    this.leerDatos();    
+    //this.leerDatos();
+    location.reload();    
   }
 
   borrarItem(){         
     this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
     
     this.popUpEliminado();
-    this.leerDatos();
-    this.leerDatos();    
+    //this.leerDatos();
+    location.reload();    
   }
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -80,8 +80,9 @@ export class SkillsComponent implements OnInit {
     this.datosPortfolio.modificarDatos(this.url, body).subscribe();
     
     this.poUpModificacion();
-    this.leerDatos();
-    this.leerDatos();        
+    
+    //this.leerDatos();
+    location.reload();        
   }
 
   //vuelve a Cargar los datos guardados en la BDD

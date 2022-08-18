@@ -57,16 +57,16 @@ export class EducationComponent implements OnInit {
       this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
       
       this.popUpAgregado();
-      this.leerDatos();
-      this.leerDatos();
+      location.reload();
+      //this.leerDatos();
     }
   
     borrarItem(){         
       this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
       
       this.popUpEliminado();
-      this.leerDatos();
-      this.leerDatos();    
+      location.reload();
+      //this.leerDatos();    
     }
   
     //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -84,8 +84,8 @@ export class EducationComponent implements OnInit {
       this.datosPortfolio.modificarDatos(this.url, body).subscribe();
       
       this.poUpModificacion();
-      this.leerDatos();
-      this.leerDatos();
+      location.reload();
+      //this.leerDatos();
     }
   
     //vuelve a Cargar los datos guardados en la BDD
