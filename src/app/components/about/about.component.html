@@ -17,14 +17,14 @@
       <p>{{dato.about}}</p>
     </div>
     <div class="lapiz">
-      <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+      <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicionAbout"><i
           class="fa-solid fa-pencil"></i></button>
     </div>
   </div>
 
   <!-- Modal de Bootstrap Nombre y Posicion-->
 
-  <div class="modal fade " id="infoUsuario" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal fade " id="infoUsuario" tabindex="-1" aria-labelledby="infoUsuario" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-primary">
@@ -52,7 +52,7 @@
 
   <!-- Modal de Bootstrap SOBRE MI-->
 
-  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade " id="edicionAbout" tabindex="-1" aria-labelledby="edicionAbout" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
         <div class="modal-header bg-primary">

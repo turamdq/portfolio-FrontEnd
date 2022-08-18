@@ -3,7 +3,7 @@
     <h2 class="titulos-secciones">Experiencia</h2>
     <div class="btn-agregar">
       <button *ngIf="isLogged" type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
-        data-bs-target="#agregar">Añadir</button>
+        data-bs-target="#añadirExperiencia">Añadir</button>
     </div>
   </div>
 
@@ -19,16 +19,16 @@
           <p>{{experience.tasks}}</p>
         </div>
         <div class="botones">
-          <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#edicion"
+          <button *ngIf="isLogged" class="btn btn-edicion" data-bs-toggle="modal" data-bs-target="#editarExperiencia"
             (click)="itemAModificar(experience)"><i class="fa-solid fa-pencil"></i></button>
-          <button *ngIf="isLogged" class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminar"
+          <button *ngIf="isLogged" class="btn btn-eliminar" data-bs-toggle="modal" data-bs-target="#eliminarExperiencia"
             (click)="itemAModificar(experience)"><i class="fa-solid fa-trash"></i></button>
         </div>
       </div>
 
       <!-- Modal de Bootstrap confirmacion de eliminacion-->
 
-      <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="eliminarExperiencia" tabindex="-1" aria-labelledby="eliminarExperiencia" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-sm">
           <div class="modal-content">
             <div class="modal-body" style="text-align: center">
@@ -45,11 +45,11 @@
 
       <!-- Modal de Bootstrap Edicion -->
 
-      <div class="modal fade" id="edicion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="editarExperiencia" tabindex="-1" aria-labelledby="editarExperiencia" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-primary">
-              <h5 class="modal-title text-white" id="exampleModalLabel">Modificar Experiencia</h5>
+              <h5 class="modal-title text-white" id="editarExperiencia">Modificar Experiencia</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                 (click)="descartarCambios()"></button>
             </div>
@@ -103,7 +103,7 @@
 
       <!-- Modal de Bootstrap Añadir -->
 
-      <div class="modal fade" id="agregar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="añadirExperiencia" tabindex="-1" aria-labelledby="añadirExperiencia" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-primary">
