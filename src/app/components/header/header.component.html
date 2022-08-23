@@ -30,10 +30,10 @@
   <!--imagen de portada + imagen de usuario superpuesta-->
 
   <div class="container-portada">
-    <img class="img-fluid imagenPortada" src={{dato.backImage}} alt="">
+    <img class="img-fluid position-absolute imagenPortada" src={{dato.backImage}} alt="">
     <button *ngIf="isLogged" class="btn btn-portada"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
         data-bs-target="#imagenPortada"></i></button>
-    <img class="img-fluid imagenUsuario" src={{dato.image}}>
+    <img class="img-fluid position-relative imagenUsuario" src={{dato.image}}>
     <button *ngIf="isLogged" class="btn btn-usuario"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
         data-bs-target="#imagenUsuario"></i></button>
   </div>
