@@ -53,23 +53,23 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-success">
-              <h5 class="modal-title text-white" id="exampleModalLabel">Modificar sección Educación</h5>
+              <h5 class="modal-title text-white">Modificar sección Educación</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                 (click)="descartarCambios()"></button>
             </div>
             <div class="modal-body">
               <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
-              <input id="nombre" class="form-control" type="text" placeholder="Nombre de la institución"
+              <input class="form-control" type="text" placeholder="Nombre de la institución"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
               <label for="titulo" style="margin-bottom: 10px"><b>Título:</b></label>
-              <input id="titulo" class="form-control" type="text" placeholder="Título obtenido"
+              <input class="form-control" type="text" placeholder="Título obtenido"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="title">
               <label for="descripcion" style="margin-bottom: 10px"><b>Descripción:</b></label>
-              <input id="descripcion" class="form-control" type="text" placeholder="Descripción de lo aprendido"
+              <input class="form-control" type="text" placeholder="Descripción de lo aprendido"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="description">
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3">URL de imagen</span>
-                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                <span class="input-group-text">URL de imagen</span>
+                <input type="url" class="form-control" aria-describedby="basic-addon3"
                   [(ngModel)]="image">
               </div>
             </div>
@@ -85,18 +85,18 @@
 
       <!-- Modal de Bootstrap Añadir -->
 
-      <div class="modal fade " id="agregarEducation" tabindex="-1" aria-labelledby="agregarEducation"
+      <div class="modal fade" id="agregarEducation" tabindex="-1" aria-labelledby="agregarEducation"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-success">
-              <h5 class="modal-title text-white" id="exampleModalLabel">Añadir Educación</h5>
+              <h5 class="modal-title text-white">Añadir Educación</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                 (click)="descartarCambios()"></button>
             </div>
             <div class="modal-body">
               <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
-              <input id="nombre" class="form-control" type="text" placeholder="Nombre de la institución"
+              <input class="form-control" type="text" placeholder="Nombre de la institución"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
               <label for="perido" style="margin-bottom: 10px"><b>Título:</b></label>
               <input class="form-control" type="text" placeholder="Título obtenido" aria-label="default input example"
@@ -106,8 +106,8 @@
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="description">
               <label for="basic-url" class="form-label"></label>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3">URL de imagen</span>
-                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                <span class="input-group-text">URL de imagen</span>
+                <input type="url" class="form-control" aria-describedby="basic-addon3"
                   [(ngModel)]="image">
               </div>
             </div>

@@ -15,7 +15,7 @@ export class SkillsComponent implements OnInit {
   isLogged = false;
   
   skillsList: any;   
-  //nuevoId: number = 0;
+  nuevoId: number = 0;
 
   id: string = "";
   name: string="";
@@ -47,9 +47,8 @@ export class SkillsComponent implements OnInit {
   }
 
   agregarItem() {    
-    //this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha        
-    //saco la parte id del body dado q lo genera automaticamente el back id: this.nuevoId, 
-    const body = {name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};
+    this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha   
+    const body = {id: this.nuevoId, name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     
     this.popUpAgregado();
