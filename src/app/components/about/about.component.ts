@@ -12,7 +12,7 @@ export class AboutComponent implements OnInit {
 
   isLogged = false;
   datosList:any;
-  url:string="http://localhost:8080/persona";
+  url:string="persona";
 
 
   constructor(private datosPortfolio:PortfolioService, private tokenService:TokenService) { }
@@ -54,6 +54,8 @@ export class AboutComponent implements OnInit {
     })    
     Toast.fire({
       icon: 'success',
+      background: 'black',
+      color: 'white',
       title: 'Cambios guardados'
     })
   }

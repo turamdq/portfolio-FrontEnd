@@ -19,7 +19,7 @@
         <a href="#"><i class="fa-brands fa-linkedin icons"></i></a>
       </div>
       <div class="boton-acceso">
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="login()" *ngIf="!isLogged"
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#login" *ngIf="!isLogged"
         >Login</button>
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" (click)="onLogOut()" *ngIf="isLogged"
         >Logout</button>
@@ -30,10 +30,10 @@
   <!--imagen de portada + imagen de usuario superpuesta-->
 
   <div class="container-portada">
-    <img class="img-fluid imagenPortada" src={{dato.backImage}} alt="">
+    <img class="img-fluid position-absolute imagenPortada" src={{dato.backImage}} alt="">
     <button *ngIf="isLogged" class="btn btn-portada"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
         data-bs-target="#imagenPortada"></i></button>
-    <img class="img-fluid imagenUsuario" src={{dato.image}}>
+    <img class="img-fluid position-relative imagenUsuario" src={{dato.image}}>
     <button *ngIf="isLogged" class="btn btn-usuario"><i class="fa-solid fa-pencil" data-bs-toggle="modal"
         data-bs-target="#imagenUsuario"></i></button>
   </div>
@@ -97,7 +97,7 @@
 
 <!-- Modal Bootstrap sign in mover a componente login? -->
 
-  <!--<div class="modal fade modal-signin py-5" tabindex="-1" role="dialog" id="login">
+  <div class="modal fade modal-signin py-5" tabindex="-1" role="dialog" id="login">
     <div class="modal-dialog bg-dark" role="document">
       <div class="modal-content rounded-4 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
@@ -107,19 +107,20 @@
         </div>
 
         <div class="modal-body p-5 pt-0">
-          <form class="">
+          <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
+
             <div class="form-floating mb-3">
-              <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="Usuario">
-              <label for="floatingInput">Usuario</label>
+              <input type="email" class="form-control rounded-3" id="nombreUsuario" name="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
+              <label class="form-label" for="nombreUsuario">Usuario</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Contraseña">
-              <label for="floatingPassword">Contraseña</label>
+              <input type="password" class="form-control rounded-3" name="password" id="password" placeholder="Contraseña" [(ngModel)]="password" required>
+              <label class="form-label" for="password">Contraseña</label>
             </div>
             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Acceder</button>
           </form>
         </div>
       </div>
     </div>
-  </div>-->
+  </div>
 </div>

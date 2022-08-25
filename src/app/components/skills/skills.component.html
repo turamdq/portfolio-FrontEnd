@@ -52,13 +52,13 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-warning">
-              <h5 class="modal-title" id="exampleModalLabel">Añadir Hard & Soft Skill</h5>
+              <h5 class="modal-title" id="ModalLabelAñadir">Añadir Hard & Soft Skill</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                 (click)="descartarCambios()"></button>
             </div>
             <div class="modal-body">
               <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
-              <input id="nombre" class="form-control" type="text" placeholder="Nombre de la Habilidad"
+              <input class="form-control" type="text" placeholder="Nombre de la Habilidad"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
               <label for="perido" style="margin-bottom: 10px"><b>Porcentaje:</b></label>
               <input class="form-control" type="text" placeholder="Porcentaje de habilidad"
@@ -68,8 +68,8 @@
                 [(ngModel)]="outerStrokeColor" title="Seleciona un color">
               <label for="basic-url" class="form-label"></label>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3">URL de la imagen</span>
-                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                <span class="input-group-text">URL de la imagen</span>
+                <input type="url" class="form-control" aria-describedby="basic-addon3"
                   [(ngModel)]="imageSrc">
               </div>
             </div>
@@ -89,24 +89,24 @@
         <div class="modal-dialog modal-dialog-centered modal-lg">
           <div class="modal-content">
             <div class="modal-header bg-warning">
-              <h5 class="modal-title" id="exampleModalLabel">Modificar sección Hard & Soft Skills</h5>
+              <h5 class="modal-title" id="ModalLabelEditarTitle">Modificar sección Hard & Soft Skills</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
                 (click)="descartarCambios()"></button>
             </div>
             <div class="modal-body">
               <label for="nombre" style="margin-bottom: 10px"><b>Nombre:</b></label>
-              <input id="nombre" class="form-control" type="text" placeholder="Nombre de la Habilidad"
+              <input class="form-control" type="text" placeholder="Nombre de la Habilidad"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="name">
               <label for="perido" style="margin-bottom: 10px"><b>Porcentaje:</b></label>
               <input class="form-control" type="text" placeholder="Porcentaje de habilidad"
                 aria-label="default input example" style="margin-bottom: 30px" [(ngModel)]="percent">
               <label for="ColorInput" class="form-label"><b>Seleccion de Color</b></label>
-              <input type="color" class="form-control form-control-color" id="ColorInput" [value]="outerStrokeColor"
+              <input type="color" class="form-control form-control-color" id="ColorInput2" [value]="outerStrokeColor"
                 [(ngModel)]="outerStrokeColor" title="Seleciona un color">
               <label for="basic-url" class="form-label"></label>
               <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon3">URL de la imagen</span>
-                <input type="url" class="form-control" id="basic-url" aria-describedby="basic-addon3"
+                <span class="input-group-text">URL de la imagen</span>
+                <input type="url" class="form-control" aria-describedby="basic-addon3"
                   [(ngModel)]="imageSrc">
               </div>
             </div>

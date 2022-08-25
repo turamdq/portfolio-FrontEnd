@@ -9,10 +9,8 @@ import { EducationComponent } from './components/education/education.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LoginComponent } from './components/login/login.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HttpClientModule } from '@angular/common/http';
-import { ModalComponent } from './components/modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { interceptorProvider } from './services/interceptor-service';
@@ -27,9 +25,8 @@ import { interceptorProvider } from './services/interceptor-service';
     EducationComponent,
     SkillsComponent,
     ProjectsComponent,
-    FooterComponent,
-    LoginComponent,
-    ModalComponent,
+    FooterComponent,    
+    
     HomeComponent
   ],
   imports: [

@@ -43,32 +43,34 @@
 
 .imagenUsuario {
     border-radius: 50%;
-    position: absolute;
+    /*position: absolute;*/
     z-index: 2;
     width: 13%;
-    margin-left: -96%;
-    margin-top: 28%;
+    margin-left: 40px;
+    margin-top: 14%;
     border-radius: 50%;
     border: 2px solid rgb(8, 99, 235);
 }
 
 .imagenPortada {
-    position: relative;
-    z-index: 1;    
-    width: 100%;
+    /*position: relative;*/
+    z-index: 1;
+    /*width: 100%;*/
 }
 
 /* Boton de edicion portada */
 
 .container-portada {
-    position: relative;
+    /*position: relative;*/
 }
 
 .btn-portada {
     position: absolute;
     z-index: 2;
-    top: 3em;    
-    right: 4em;
+    margin-left: 93%;
+    margin-top: 3%;
+    /*top: 3em;    
+    right: 4em;*/
     color: rgb(255, 255, 255);
     font-size:1.5vw;
     border: 3px solid rgb(255, 255, 255);
@@ -84,8 +86,10 @@
 .btn-usuario {
     position: absolute;
     z-index: 2;
-    top: 22em;
-    left: 8.5em;
+    margin-left: -2%;
+    margin-top: 19%;
+    /*top: 22em;
+    left: 8.5em;*/
     color: rgb(0, 0, 0);
     font-size:1.5vw;
     background-color: rgb(255, 255, 255);
