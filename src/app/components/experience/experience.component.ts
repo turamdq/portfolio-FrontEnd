@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 import { TokenService } from '../../services/token.service';
 import Swal from 'sweetalert2';
-// import { Portfolio } from '../../interfaces/portfolio'; APLICAR INTERFACE !!!!!!
 
 @Component({
   selector: 'app-experience',
