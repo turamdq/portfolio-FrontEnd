@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class SkillsComponent implements OnInit {
 
-  url:string="http://localhost:8080/skill";
+  url:string="skill";
   isLogged = false;
   
   skillsList: any;   

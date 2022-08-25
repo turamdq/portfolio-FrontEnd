@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 export class ExperienceComponent implements OnInit {
 
   //cambie http://localhost:8080/experience
-  url:string="http://localhost:8080/experiencia";
+  url:string="experiencia";
   
   isLogged = false;
   experienceList:any;   

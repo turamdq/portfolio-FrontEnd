@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class ProjectsComponent implements OnInit {
 
-  url:string="http://localhost:8080/proyecto";
+  url:string="proyecto";
   
   isLogged = false;
   projectsList:any;   

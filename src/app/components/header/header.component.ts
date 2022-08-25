@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
   errMsj!: string;
 
   datosList:any;  
-  url:string="http://localhost:8080/header";
+  url:string="header";
 
   constructor(private datosPortfolio:PortfolioService, private router:Router, private tokenService: TokenService, private authService: AuthService) { }
 

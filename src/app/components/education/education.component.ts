@@ -11,7 +11,7 @@ import { TokenService } from 'src/app/services/token.service';
 export class EducationComponent implements OnInit {
 
   
-  url:string="http://localhost:8080/educacion";
+  url:string="educacion";
   
   isLogged = false;
   educationList: any;
