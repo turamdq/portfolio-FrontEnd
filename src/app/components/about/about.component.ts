@@ -54,6 +54,8 @@ export class AboutComponent implements OnInit {
     })    
     Toast.fire({
       icon: 'success',
+      background: 'black',
+      color: 'white',
       title: 'Cambios guardados'
     })
   }

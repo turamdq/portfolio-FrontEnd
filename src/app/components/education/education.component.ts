@@ -50,23 +50,16 @@ export class EducationComponent implements OnInit {
 
     //Funcion para obtener datos mediante el servicio
 
-    agregarItem() {
-      // console.log(this.name);
+    agregarItem() {      
       this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
       const body = {id: this.nuevoId, name: this.name, title: this.title, description: this.description, image: this.image};
-      this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
-      
+      this.datosPortfolio.agregarNuevo(this.url, body).subscribe();      
       this.popUpAgregado();
-      location.reload();
-      //this.leerDatos();
     }
   
     borrarItem(){         
-      this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
-      
-      this.popUpEliminado();
-      location.reload();
-      //this.leerDatos();    
+      this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();      
+      this.popUpEliminado();      
     }
   
     //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -81,11 +74,8 @@ export class EducationComponent implements OnInit {
   
     guardarCambios(){
       const body = {id: this.id, name: this.name, title: this.title, description: this.description, image: this.image};      
-      this.datosPortfolio.modificarDatos(this.url, body).subscribe();
-      
-      this.poUpModificacion();
-      location.reload();
-      //this.leerDatos();
+      this.datosPortfolio.modificarDatos(this.url, body).subscribe();      
+      this.poUpModificacion();      
     }
   
     //vuelve a Cargar los datos guardados en la BDD
@@ -94,44 +84,52 @@ export class EducationComponent implements OnInit {
       this.leerDatos();          
     }
 
+    //Dado que en la primera carga hasta no realizar un refrezco de pantalla
+    //no actualiza la vista la primera vez, por el momento uso
+    //location.reload();
+    
+    recargar() {
+      location.reload();
+    }
+
     // Mensajes de Alerta (pasar a servicio)
   
   popUpEliminado() {
-    const Toast = Swal.mixin({
-      toast: true,
+    Swal.fire({
       position: 'center',
-      showConfirmButton: false,
-      timer: 1500
-    })    
-    Toast.fire({
       icon: 'warning',
-      title: 'Educación eliminada'
+      background: 'black',
+      color: 'yellow',
+      title: 'Educación Eliminada',
+      showConfirmButton: false,
+      timer: 2500
     })
+    this.recargar();
   }
 
   poUpModificacion() {
-    const Toast = Swal.mixin({
-      toast: true,
+    Swal.fire({
       position: 'center',
-      showConfirmButton: false,
-      timer: 1500
-    })    
-    Toast.fire({
       icon: 'success',
-      title: 'Cambios guardados'
+      background: 'black',
+      color: 'white',
+      title: 'Modificaciones Guardadas',
+      showConfirmButton: false,
+      timer: 2500
     })
+    this.recargar();
   }
 
   popUpAgregado() {
-    const Toast = Swal.mixin({
-      toast: true,
+    Swal.fire({
       position: 'center',
-      showConfirmButton: false,
-      timer: 1500
-    })    
-    Toast.fire({
       icon: 'success',
-      title: 'Estudio Agregado'
+      background: 'black',
+      color: 'white',
+      title: 'Educación Agregada',
+      showConfirmButton: false,
+      timer: 2500
     })
+    this.recargar();
   }
 }

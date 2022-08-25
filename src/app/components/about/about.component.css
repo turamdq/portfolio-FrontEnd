@@ -8,18 +8,20 @@
 
 .texto-sobre-mi {
     display: flex;    
-    border-radius: 30px;    
-    background-color: rgb(243, 243, 243);
+    border-radius: 30px;
+    border: 1px solid;
+    border-color: rgb(33, 15, 68);    
+    background-color: rgb(236, 244, 252);
     padding: 80px;
     margin-top: -40px;
     margin-left: 90px;
     margin-right: 90px;
-    box-shadow: 0 4px 8px 0 rgba(13, 110, 253, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 18px 18px 0 rgba(13, 110, 253, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
     width: 80%;    
 }
 
 .texto-sobre-mi h2 {
-    color: rgb(13, 1, 122);    
+    color: rgb(0, 0, 0);    
 }
 
 .texto-sobre-mi p {

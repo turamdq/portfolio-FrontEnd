@@ -10,7 +10,6 @@ import Swal from 'sweetalert2';
 })
 export class ExperienceComponent implements OnInit {
 
-  //cambie http://localhost:8080/experience
   url:string="experiencia";
   
   isLogged = false;
@@ -22,7 +21,6 @@ export class ExperienceComponent implements OnInit {
   image: string = "";
   startDate: string = "";
   endDate: string = "";
-  //period: string = "";
   position: string = "";
   tasks: string = "";  
 
@@ -46,31 +44,23 @@ export class ExperienceComponent implements OnInit {
     this.name ="";
     this.image = "";
     this.startDate = "";
-    this.endDate = "";
-    //this.period = "";
+    this.endDate = ""
     this.position = "";
     this.tasks = "";
     
   }
-
-  //quite period: this.period
+  
   agregarItem() {    
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
     const body = {id: this.nuevoId, name:this.name, image:this.image, startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};
     this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
     
     this.popUpAgregado();
-    
-    
-    location.reload();
-        
   }
 
   borrarItem(){         
-    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
-    
+    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();    
     this.popUpEliminado();
-    location.reload();    
   }
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -81,7 +71,6 @@ export class ExperienceComponent implements OnInit {
     this.image = `${experience.image}`;
     this.startDate = `${experience.startDate}`;
     this.endDate = `${experience.endDate}`;
-    //this.period = `${experience.period}`;
     this.position = `${experience.position}`;
     this.tasks = `${experience.tasks}`;
   }
@@ -90,11 +79,8 @@ export class ExperienceComponent implements OnInit {
   //quite period: this.period
   guardarCambios(){
     const body = {id: this.id, name:this.name, image:this.image,startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};     
-    this.datosPortfolio.modificarDatos(this.url, body).subscribe();
-    
-    this.poUpModificacion();
-    location.reload();
-            
+    this.datosPortfolio.modificarDatos(this.url, body).subscribe();    
+    this.poUpModificacion();            
   }
 
   //vuelve a Cargar los datos guardados en la BDD
@@ -102,46 +88,49 @@ export class ExperienceComponent implements OnInit {
   descartarCambios() {
     this.leerDatos();       
   }
-  
+
+  recargar() {
+    location.reload();
+  }  
 
   // Mensajes de Alerta
   
   popUpEliminado() {
-    const Toast = Swal.mixin({
-      toast: true,
+    Swal.fire({
       position: 'center',
-      showConfirmButton: false,
-      timer: 1500
-    })    
-    Toast.fire({
       icon: 'warning',
-      title: 'Empleo eliminado'
-    })
+      background: 'black',
+      color: 'yellow',
+      title: 'Experiencia eliminada',
+      showConfirmButton: false,
+      timer: 2500
+    });
+    this.recargar();
   }
 
   poUpModificacion() {
-    const Toast = Swal.mixin({
-      toast: true,
+    Swal.fire({
       position: 'center',
-      showConfirmButton: false,
-      timer: 1500
-    })    
-    Toast.fire({
       icon: 'success',
-      title: 'Cambios guardados'
-    })
+      background: 'black',
+      color: 'white',
+      title: 'Cambios guardados',
+      showConfirmButton: false,
+      timer: 2500
+    });
+    this.recargar();
   }
 
   popUpAgregado() {
-    const Toast = Swal.mixin({
-      toast: true,
+    Swal.fire({
       position: 'center',
-      showConfirmButton: false,
-      timer: 1500
-    })    
-    Toast.fire({
       icon: 'success',
-      title: 'Empleo Agregado'
-    })
+      background: 'black',
+      color: 'white',
+      title: 'Experiencia agragada',
+      showConfirmButton: false,
+      timer: 2500
+    });
+    this.recargar();
   }
 }

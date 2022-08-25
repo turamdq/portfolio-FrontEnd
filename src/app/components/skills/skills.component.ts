@@ -101,6 +101,8 @@ export class SkillsComponent implements OnInit {
     })    
     Toast.fire({
       icon: 'warning',
+      background: 'black',
+      color: 'white',
       title: 'Skill eliminada'
     })
   }
@@ -114,6 +116,8 @@ export class SkillsComponent implements OnInit {
     })    
     Toast.fire({
       icon: 'success',
+      background: 'black',
+      color: 'white',
       title: 'Cambios guardados'
     })
   }
@@ -127,6 +131,8 @@ export class SkillsComponent implements OnInit {
     })    
     Toast.fire({
       icon: 'success',
+      background: 'black',
+      color: 'white',
       title: 'Skill Agregada'
     })
   }
