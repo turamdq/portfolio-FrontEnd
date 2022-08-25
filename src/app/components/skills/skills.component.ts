@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
 import Swal from 'sweetalert2';
 import { TokenService } from 'src/app/services/token.service';
-// import { Portfolio } from '../../interfaces/portfolio'; APLICAR INTERFACE !!!!!!
 
 @Component({
   selector: 'app-skills',
@@ -16,7 +15,6 @@ export class SkillsComponent implements OnInit {
   
   skillsList: any;   
   nuevoId: number = 0;
-
   id: string = "";
   name: string="";
   percent: string = "";
@@ -49,16 +47,14 @@ export class SkillsComponent implements OnInit {
   agregarItem() {    
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha   
     const body = {id: this.nuevoId, name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};
-    this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
-    
+    this.datosPortfolio.agregarNuevo(this.url, body).subscribe();    
     this.popUpAgregado();
     //this.leerDatos();
     location.reload();    
   }
 
   borrarItem(){         
-    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();
-    
+    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();    
     this.popUpEliminado();
     //this.leerDatos();
     location.reload();    
@@ -76,10 +72,8 @@ export class SkillsComponent implements OnInit {
 
   guardarCambios(){
     const body = {id: this.id, name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};     
-    this.datosPortfolio.modificarDatos(this.url, body).subscribe();
-    
-    this.poUpModificacion();
-    
+    this.datosPortfolio.modificarDatos(this.url, body).subscribe();    
+    this.poUpModificacion();    
     //this.leerDatos();
     location.reload();        
   }

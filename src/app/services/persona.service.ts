@@ -16,6 +16,3 @@ export class PersonaService {
     return this.http.get<Persona>(this.URL+ 'traer/perfil');
   }
 }
-
-
-// VER PERSONA QUE EN EL ORIGINAL ESTA EN MINUSCULAS
