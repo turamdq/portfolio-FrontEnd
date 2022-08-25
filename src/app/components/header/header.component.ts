@@ -37,13 +37,7 @@ export class HeaderComponent implements OnInit {
     }
     }
 
-    //if(this.tokenService.getToken()){
-    //  this.isLogged=true;
-    //}else{
-    //  this.isLogged = false;
-    //}
-  //}
-
+    
   //Funcion para obtener datos mediante el servicio
 
   leerDatos(){
@@ -61,11 +55,7 @@ export class HeaderComponent implements OnInit {
 
   descartarCambios() {
     return this.leerDatos();    
-  }
-
-  /*login(){
-    this.router.navigate(['/login']);
-  }*/
+  }  
 
   onLogOut():void{
     this.tokenService.logOut();
@@ -89,8 +79,6 @@ export class HeaderComponent implements OnInit {
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
         
-      })
-      
+      })      
   }
-
 }
