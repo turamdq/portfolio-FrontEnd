@@ -10,7 +10,7 @@ export class PortfolioService {
 
   constructor(private http:HttpClient) { }
   
-  apiUrl : string = "http://localhost:8080";
+  apiUrl : string = "https://portfolioturano.herokuapp.com";
   
   // Leer a traves del metodo HTTP GET
   
