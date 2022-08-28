@@ -53,12 +53,18 @@ export class EducationComponent implements OnInit {
     agregarItem() {      
       this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
       const body = {id: this.nuevoId, name: this.name, title: this.title, description: this.description, image: this.image};
-      this.datosPortfolio.agregarNuevo(this.url, body).subscribe();      
+      this.datosPortfolio.agregarNuevo(this.url, body).subscribe(data => {
+        console.log(data);
+        this.leerDatos();
+  });          
       this.popUpAgregado();
     }
   
     borrarItem(){         
-      this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();      
+      this.datosPortfolio.borrarDatos(this.url, this.id).subscribe(data => {
+        console.log(data);
+        this.leerDatos();
+  });      
       this.popUpEliminado();      
     }
   
@@ -74,7 +80,10 @@ export class EducationComponent implements OnInit {
   
     guardarCambios(){
       const body = {id: this.id, name: this.name, title: this.title, description: this.description, image: this.image};      
-      this.datosPortfolio.modificarDatos(this.url, body).subscribe();      
+      this.datosPortfolio.modificarDatos(this.url, body).subscribe(data => {
+        console.log(data);
+        this.leerDatos();
+  });          
       this.poUpModificacion();      
     }
   
@@ -82,14 +91,6 @@ export class EducationComponent implements OnInit {
     
     descartarCambios() {
       this.leerDatos();          
-    }
-
-    //Dado que en la primera carga hasta no realizar un refrezco de pantalla
-    //no actualiza la vista la primera vez, por el momento uso
-    //location.reload();
-    
-    recargar() {
-      location.reload();
     }
 
     // Mensajes de Alerta (pasar a servicio)
@@ -102,9 +103,8 @@ export class EducationComponent implements OnInit {
       color: 'yellow',
       title: 'Educación Eliminada',
       showConfirmButton: false,
-      timer: 2500
-    })
-    this.recargar();
+      timer: 2000
+    });
   }
 
   poUpModificacion() {
@@ -115,9 +115,8 @@ export class EducationComponent implements OnInit {
       color: 'white',
       title: 'Modificaciones Guardadas',
       showConfirmButton: false,
-      timer: 2500
-    })
-    this.recargar();
+      timer: 2000
+    });
   }
 
   popUpAgregado() {
@@ -128,8 +127,7 @@ export class EducationComponent implements OnInit {
       color: 'white',
       title: 'Educación Agregada',
       showConfirmButton: false,
-      timer: 2500
-    })
-    this.recargar();
+      timer: 2000
+    });
   }
 }

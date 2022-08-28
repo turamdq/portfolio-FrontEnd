@@ -47,17 +47,19 @@ export class SkillsComponent implements OnInit {
   agregarItem() {    
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha   
     const body = {id: this.nuevoId, name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};
-    this.datosPortfolio.agregarNuevo(this.url, body).subscribe();    
+    this.datosPortfolio.agregarNuevo(this.url, body).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+});    
     this.popUpAgregado();
-    //this.leerDatos();
-    location.reload();    
   }
 
   borrarItem(){         
-    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();    
+    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+});        
     this.popUpEliminado();
-    //this.leerDatos();
-    location.reload();    
   }
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -72,10 +74,11 @@ export class SkillsComponent implements OnInit {
 
   guardarCambios(){
     const body = {id: this.id, name:this.name, percent:this.percent, outerStrokeColor: this.outerStrokeColor, imageSrc: this.imageSrc};     
-    this.datosPortfolio.modificarDatos(this.url, body).subscribe();    
-    this.poUpModificacion();    
-    //this.leerDatos();
-    location.reload();        
+    this.datosPortfolio.modificarDatos(this.url, body).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+});        
+    this.poUpModificacion();
   }
 
   //vuelve a Cargar los datos guardados en la BDD

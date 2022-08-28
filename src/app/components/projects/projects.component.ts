@@ -49,17 +49,19 @@ export class ProjectsComponent implements OnInit {
   agregarItem() {    
     //this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha id: this.nuevoId,    
     const body = {name:this.name, description: this.description, dates: this.dates, image: this.image, link: this.link};
-    this.datosPortfolio.agregarNuevo(this.url, body).subscribe();    
+    this.datosPortfolio.agregarNuevo(this.url, body).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+  });        
     this.popUpAgregado();
-    location.reload();
-    //this.leerDatos();    
   }
 
   borrarItem(){         
-    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();    
-    this.popUpEliminado();    
-    //this.leerDatos();
-    location.reload();    
+    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+});        
+    this.popUpEliminado();
   }
 
   //Obtiene los datos a modificar o el ID del elemento a eliminar
@@ -75,10 +77,11 @@ export class ProjectsComponent implements OnInit {
 
   guardarCambios(){
     const body = {id: this.id, name:this.name, description:this.description, dates:this.dates, image:this.image, link:this.link};     
-    this.datosPortfolio.modificarDatos(this.url, body).subscribe();    
+    this.datosPortfolio.modificarDatos(this.url, body).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+});    
     this.poUpModificacion();
-    location.reload();
-    //this.leerDatos();        
   }
 
   //vuelve a Cargar los datos guardados en la BDD
