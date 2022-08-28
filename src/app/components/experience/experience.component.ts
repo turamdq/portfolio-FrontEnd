@@ -53,13 +53,21 @@ export class ExperienceComponent implements OnInit {
   agregarItem() {    
     this.nuevoId = new Date().getTime();      //Genera un numero basado en la fecha    
     const body = {id: this.nuevoId, name:this.name, image:this.image, startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};
-    this.datosPortfolio.agregarNuevo(this.url, body).subscribe();
+    this.datosPortfolio.agregarNuevo(this.url, body).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+});
     
     this.popUpAgregado();
   }
 
-  borrarItem(){         
-    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();    
+  borrarItem(){
+    this.datosPortfolio.borrarDatos(this.url, this.id).subscribe(data => {
+      console.log(data);    
+      this.leerDatos();
+    });
+        
+    //this.datosPortfolio.borrarDatos(this.url, this.id).subscribe();    
     this.popUpEliminado();
   }
 
@@ -79,7 +87,10 @@ export class ExperienceComponent implements OnInit {
   //quite period: this.period
   guardarCambios(){
     const body = {id: this.id, name:this.name, image:this.image,startDate: this.startDate, endDate: this.endDate, position: this.position, tasks: this.tasks};     
-    this.datosPortfolio.modificarDatos(this.url, body).subscribe();    
+    this.datosPortfolio.modificarDatos(this.url, body).subscribe(data => {
+      console.log(data);
+      this.leerDatos();
+});    
     this.poUpModificacion();            
   }
 
@@ -90,7 +101,7 @@ export class ExperienceComponent implements OnInit {
   }
 
   recargar() {
-    location.reload();
+    //location.reload();
   }  
 
   // Mensajes de Alerta
@@ -105,7 +116,7 @@ export class ExperienceComponent implements OnInit {
       showConfirmButton: false,
       timer: 2500
     });
-    this.recargar();
+    //this.recargar();
   }
 
   poUpModificacion() {
@@ -118,7 +129,7 @@ export class ExperienceComponent implements OnInit {
       showConfirmButton: false,
       timer: 2500
     });
-    this.recargar();
+    //this.recargar();
   }
 
   popUpAgregado() {
@@ -131,6 +142,6 @@ export class ExperienceComponent implements OnInit {
       showConfirmButton: false,
       timer: 2500
     });
-    this.recargar();
+    //this.recargar();
   }
 }
